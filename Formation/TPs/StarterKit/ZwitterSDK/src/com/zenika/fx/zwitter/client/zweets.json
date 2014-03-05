@@ -1,0 +1,524 @@
+{
+	"users": [
+		{
+            "@id": 1,
+            "displayname": "The Doctor",
+            "img": "The10thDoctor.png",
+            "username": "@The10thDoctor"
+        },
+		{
+			"@id": 2,
+            "displayname": "A Bluth Family Member",
+            "img": "BluthFamily.png",
+            "username": "@BluthFamily"
+         },
+         {
+                "@id": 3,
+                "displayname": "The Knights Who Say Ni",
+                "img": "KnightsOfNi.png",
+                "username": "@KnightsOfNi"
+            },
+         {
+                "@id": 4,
+                "displayname": "Dennis the Peasant",
+                "img": "Dennis.png",
+                "username": "@Dennis"
+            },
+            {
+                "@id": 5,
+                "displayname": "King Arthur",
+                "img": "KingArthur.png",
+                "username": "@TheOnceAndFutureKing"
+            },
+            {
+                "@id": 6,
+                "displayname": "A Guard",
+                "img": "Guard.png",
+                "username": "@AMoiLaGuarde"
+            },
+            {
+                "@id": 7,
+                "displayname": "Stagiaire Zenika",
+                "img": "znk.png",
+                "username": "@zenstagiaire"
+            }
+	],
+    "db": [
+        {
+            "quote": "That's why you always leave a note!",
+            "source": 2
+        },
+        {
+            "quote": "No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide.",
+            "source": 2
+        },
+        {
+            "quote": "Now, when you do this without getting punched in the chest, you'll have more fun.",
+            "source": 2
+        },
+        {
+            "quote": "Did you enjoy your meal, Mom? You drank it fast enough.",
+            "source": 2
+        },
+        {
+            "quote": "It's called 'taking advantage.' It's what gets you ahead in life.",
+            "source": 2
+        },
+        {
+            "quote": "He'll want to use your yacht, and I don't want this thing smelling like fish.",
+            "source": 2
+        },
+        {
+            "quote": "There's so many poorly chosen words in that sentence.",
+            "source": 2
+        },
+        {
+            "quote": "Marry me.",
+            "source": 2
+        },
+        {
+            "quote": "He'll want to use your yacht, and I don't want this thing smelling like fish.",
+            "source": 2
+        },
+        {
+            "quote": "I hear the jury's still out on science.",
+            "source": 2
+        },
+        {
+            "quote": "Say goodbye to these, because it's the last time!",
+            "source": 2
+        },
+        {
+            "quote": "Army had half a day.",
+            "source": 2
+        },
+        {
+            "quote": "Well, what do you expect, mother?",
+            "source": 2
+        },
+        {
+            "quote": "What's Spanish for \"I know you speak English?\"",
+            "source": 2
+        },
+        {
+            "quote": "It's a hug, Michael. I'm hugging you.",
+            "source": 2
+        },
+        {
+            "quote": "I don't understand the question, and I won't respond to it.",
+            "source": 2
+        },
+        {
+            "quote": "Say goodbye to these, because it's the last time!",
+            "source": 2
+        },
+        {
+            "quote": "Steve Holt!",
+            "source": 2
+        },
+        {
+            "quote": "I'm afraid I just blue myself.",
+            "source": 2
+        },
+        {
+            "quote": "I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense.",
+            "source": 2
+        },
+        {
+            "quote": "Guy's a pro.",
+            "source": 2
+        },
+        {
+            "quote": "That's why you always leave a note!",
+            "source": 2
+        },
+        {
+            "quote": "I care deeply for nature.",
+            "source": 2
+        },
+        {
+            "quote": "That's why you always leave a note!",
+            "source": 2
+        },
+        {
+            "quote": "No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide.",
+            "source": 2
+        },
+        {
+            "quote": "I hear the jury's still out on science.",
+            "source": 2
+        },
+        {
+            "quote": "I don't criticize you! And if you're worried about criticism, sometimes a diet is the best defense.",
+            "source": 2
+        },
+        {
+            "quote": "What's Spanish for \"I know you speak English?\"",
+            "source": 2
+        },
+        {
+            "quote": "Now, when you do this without getting punched in the chest, you'll have more fun.",
+            "source": 2
+        },
+        {
+            "quote": "What's Spanish for \"I know you speak English?\"",
+            "source": 2
+        },
+
+
+
+
+
+
+        {
+            "quote": "I'm the Doctor. Well, they call me the Doctor. I don't know why. I call me the Doctor too. I still don't know why.",
+            "source": 1
+        },
+        {
+            "quote": "You hate me; you want to kill me! Well, go on! Kill me! KILL ME!",
+            "source": 1
+        },
+        {
+            "quote": "I am the last of my species, and I know how that weighs on the heart so don't lie to me!",
+            "source": 1
+        },
+        {
+            "quote": "Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?",
+            "source": 1
+        },
+        {
+            "quote": "It's a fez. I wear a fez now. Fezes are cool.",
+            "source": 1
+        },
+        {
+            "quote": "I'm the Doctor. Well, they call me the Doctor. I don't know why. I call me the Doctor too. I still don't know why.",
+            "source": 1
+        },
+        {
+            "quote": "No&hellip; It's a thing; it's like a plan, but with more greatness.",
+            "source": 1
+        },
+        {
+            "quote": "You hate me; you want to kill me! Well, go on! Kill me! KILL ME!",
+            "source": 1
+        },
+        {
+            "quote": "Heh-haa! Super squeaky bum time!",
+            "source": 1
+        },
+        {
+            "quote": "It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'!",
+            "source": 1
+        },
+        {
+            "quote": "You hate me; you want to kill me! Well, go on! Kill me! KILL ME!",
+            "source": 1
+        },
+        {
+            "quote": "I am the Doctor, and you are the Daleks!",
+            "source": 1
+        },
+        {
+            "quote": "You hit me with a cricket bat.",
+            "source": 1
+        },
+        {
+            "quote": "You hit me with a cricket bat.",
+            "source": 1
+        },
+        {
+            "quote": "Stop talking, brain thinking. Hush.",
+            "source": 1
+        },
+        {
+            "quote": "I am the Doctor, and you are the Daleks!",
+            "source": 1
+        },
+        {
+            "quote": "No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister.",
+            "source": 1
+        },
+        {
+            "quote": "Did I mention we have comfy chairs?",
+            "source": 1
+        },
+        {
+            "quote": "Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?",
+            "source": 1
+        },
+        {
+            "quote": "*Insistently* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do!",
+            "source": 1
+        },
+        {
+            "quote": "The way I see it, every life is a pile of good things and bad things.&hellip;hey.&hellip;the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant.",
+            "source": 1
+        },
+        {
+            "quote": "It's a fez. I wear a fez now. Fezes are cool.",
+            "source": 1
+        },
+        {
+            "quote": "You know how I sometimes have really brilliant ideas?",
+            "source": 1
+        },
+        {
+            "quote": "It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'!",
+            "source": 1
+        },
+        {
+            "quote": "No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister.",
+            "source": 1
+        },
+        {
+            "quote": "I hate yogurt. It's just stuff with bits in.",
+            "source": 1
+        },
+        {
+            "quote": "I'm the Doctor. Well, they call me the Doctor. I don't know why. I call me the Doctor too. I still don't know why.",
+            "source": 1
+        },
+        {
+            "quote": "All I've got to do is pass as an ordinary human being. Simple. What could possibly go wrong?",
+            "source": 1
+        },
+        {
+            "quote": "I am the Doctor, and you are the Daleks!",
+            "source": 1
+        },
+
+
+
+
+
+        {
+            "quote": "Ni! Ni! Ni! Ni!",
+            "source": 3
+        },
+        {
+            "quote": "You can't expect to wield supreme power just 'cause some watery tart threw a sword at you!",
+            "source": 4
+        },
+        {
+            "quote": "Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
+            "source": 5
+        },
+        {
+            "quote": "&hellip;Are you suggesting that coconuts migrate?",
+            "source": 6
+        },
+        {
+            "quote": "Listen. Strange women lying in ponds distributing swords is no basis for a system of government. Supreme executive power derives from a mandate from the masses, not from some farcical aquatic ceremony.",
+            "source": 4
+        },
+        {
+            "quote": "Ah, now we see the violence inherent in the system!",
+            "source": 4
+        },
+        {
+            "quote": "Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
+            "source": 5
+        },
+        {
+            "quote": "Well, what do you want?",
+            "source": 5
+        },
+        {
+            "quote": "Shut up! Will you shut up?!",
+            "source": 5
+        },
+        {
+            "quote": "We found them.",
+            "source": 5
+        },
+        {
+            "quote": "What do you mean?",
+            "source": 5
+        },
+        
+        {
+            "quote": "You can't expect to wield supreme power just 'cause some watery tart threw a sword at you!",
+            "source": 4
+        },
+        {
+            "quote": "What do you mean?",
+            "source": 5
+        },
+        {
+            "quote": "Where'd you get the coconuts?",
+            "source": 6
+        },
+        {
+            "quote": "Oh! Come and see the violence inherent in the system! Help, help, I'm being repressed!",
+            "source": 4
+        },
+        {
+            "quote": "I am your king.",
+            "source": 5
+        },
+        {
+            "quote": "You can't expect to wield supreme power just 'cause some watery tart threw a sword at you!",
+            "source": 4
+        },
+        {
+            "quote": "Well, Mercia's a temperate zone!",
+            "source": 6
+        },
+        {
+            "quote": "Oh, ow!",
+            "source": 5
+        },
+        {
+            "quote": "Where'd you get the coconuts?",
+            "source": 6
+        },
+        {
+            "quote": "You don't vote for kings.",
+            "source": 5
+        },
+        {
+            "quote": "Well, what do you want?",
+            "source": 5
+        },
+        {
+            "quote": "Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
+            "source": 5
+        },
+        {
+            "quote": "Ah, now we see the violence inherent in the system!",
+            "source": 4
+        },
+        {
+            "quote": "Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
+            "source": 5
+        },
+        {
+            "quote": "Well, Mercia's a temperate zone!",
+            "source": 6
+        },
+        {
+            "quote": "Well, Mercia's a temperate zone!",
+            "source": 6
+        },
+        {
+            "quote": "I am your king.",
+            "source": 5
+        },
+        {
+            "quote": "We want a shrubbery!!",
+            "source": 3
+        },
+        {
+            "quote": "We found them.",
+            "source": 5
+        },
+        {
+            "quote": "Shh! Knights, I bid you welcome to your new home. Let us ride to Camelot!",
+            "source": 5
+        },
+        {
+            "quote": "Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
+            "source": 5
+        },
+        {
+            "quote": "What do you mean?",
+            "source": 5
+        },
+        {
+            "quote": "The swallow may fly south with the sun, and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land.",
+            "source": 5
+        },
+        {
+            "quote": "Now, look here, my good man.",
+            "source": 5
+        },
+        {
+            "quote": "Oh! Come and see the violence inherent in the system! Help, help, I'm being repressed!",
+            "source": 4
+        },
+        {
+            "quote": "Well, what do you want?",
+            "source": 5
+        },
+        {
+            "quote": "Ni! Ni! Ni! Ni!",
+            "source": 3
+        },
+        {
+            "quote": "On second thoughts, let's not go there. It is a silly place.",
+            "source": 5
+        },
+        {
+            "quote": "The Knights Who Say Ni demand a sacrifice!",
+            "source": 3
+        },
+        {
+            "quote": "We want a shrubbery!!",
+            "source": 3
+        },
+        {
+            "quote": "I am your king.",
+            "source": 5
+        },
+        {
+            "quote": "Shut up! Will you shut up?!",
+            "source": 5
+        },
+        {
+            "quote": "You can't expect to wield supreme power just 'cause some watery tart threw a sword at you!",
+            "source": 4
+        },
+        {
+            "quote": "Shut up!",
+            "source": 5
+        },
+        {
+            "quote": "Well, what do you want?",
+            "source": 5
+        },
+        {
+            "quote": "You don't vote for kings.",
+            "source": 5
+        },
+        {
+            "quote": "Shh! Knights, I bid you welcome to your new home. Let us ride to Camelot!",
+            "source": 5
+        },
+        {
+            "quote": "Well, Mercia's a temperate zone!",
+            "source": 6
+        },
+        {
+            "quote": "You can't expect to wield supreme power just 'cause some watery tart threw a sword at you!",
+            "source": 4
+        },
+        {
+            "quote": "Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
+            "source": 5
+        },
+        {
+            "quote": "Well, Mercia's a temperate zone!",
+            "source": 6
+        },
+        {
+            "quote": "The Lady of the Lake, her arm clad in the purest shimmering samite, held aloft Excalibur from the bosom of the water, signifying by divine providence that I, Arthur, was to carry Excalibur. That is why I am your king.",
+            "source": 5
+        },
+        {
+            "quote": "Found them? In Mercia?! The coconut's tropical!",
+            "source": 6
+        },
+        {
+            "quote": "We want a shrubbery!!",
+            "source": 3
+        },
+        {
+            "quote": "The Knights Who Say Ni demand a sacrifice!",
+            "source": 3
+        },
+        {
+            "quote": "The swallow may fly south with the sun, and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land.",
+            "source": 5
+        }
+    ]
+}
