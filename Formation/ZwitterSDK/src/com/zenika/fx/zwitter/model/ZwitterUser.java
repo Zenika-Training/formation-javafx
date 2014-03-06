@@ -2,63 +2,68 @@ package com.zenika.fx.zwitter.model;
 
 public class ZwitterUser {
 
-  private final String username;
-  private String img;
-  private String displayName;
+    private final String username;
+    private String img;
+    private String displayName;
 
-  public ZwitterUser(String username, String profileImage, String displayName) {
-    this.username = username;
-    this.img = profileImage;
-    this.displayName = displayName;
-  }
+    public ZwitterUser(final String username, final String profileImage, final String displayName) {
+        this.username = username;
+        img = profileImage;
+        this.displayName = displayName;
+    }
 
-  public String getImg() {
-    return img;
-  }
+    public String getImg() {
+        return img;
+    }
 
-  public void setImg(String profileImage) {
-    this.img = profileImage;
-  }
+    public void setImg(final String profileImage) {
+        img = profileImage;
+    }
 
-  public String getDisplayName() {
-    return displayName;
-  }
+    public String getDisplayName() {
+        return displayName;
+    }
 
-  public void setDisplayName(String displayName) {
-    this.displayName = displayName;
-  }
+    public void setDisplayName(final String displayName) {
+        this.displayName = displayName;
+    }
 
-  public String getUsername() {
-    return username;
-  }
+    public String getUsername() {
+        return username;
+    }
 
-  @Override
-  public String toString() {
-    return displayName + "(" + username + ")";
-  }
+    @Override
+    public String toString() {
+        return displayName + "(" + username + ")";
+    }
 
-  @Override
-  public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + ((username == null) ? 0 : username.hashCode());
-    return result;
-  }
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((null == username) ? 0 : username.hashCode());
+        return result;
+    }
 
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (obj == null)
-      return false;
-    if (getClass() != obj.getClass())
-      return false;
-    ZwitterUser other = (ZwitterUser) obj;
-    if (username == null) {
-      if (other.username != null)
-        return false;
-    } else if (!username.equals(other.username))
-      return false;
-    return true;
-  }
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (null == obj) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ZwitterUser other = (ZwitterUser) obj;
+        if (null == username) {
+            if (null != other.username) {
+                return false;
+            }
+        } else if (!username.equals(other.username)) {
+            return false;
+        }
+        return true;
+    }
 }

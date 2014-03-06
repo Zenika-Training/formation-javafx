@@ -9,20 +9,20 @@ import com.zenika.fx.zwitter.model.ZwitterUser;
 
 class ZweetDb {
 
-  private final List<Zweet> db;
-  private List<ZwitterUser> users;
+    private final List<Zweet> db;
+    private final List<ZwitterUser> users;
 
-  @JsonCreator
-  private ZweetDb(@JsonProperty("users") List<ZwitterUser> users, @JsonProperty("db") List<Zweet> db) {
-    this.db = db;
-    this.users = users;
-  }
+    @JsonCreator
+    private ZweetDb(@JsonProperty("users") final List<ZwitterUser> users, @JsonProperty("db") final List<Zweet> db) {
+        this.db = db;
+        this.users = users;
+    }
 
-  public List<Zweet> getDb() {
-    return db;
-  }
+    public List<Zweet> getDb() {
+        return db;
+    }
 
-  public List<ZwitterUser> getUsers() {
-    return this.users;
-  }
+    public List<ZwitterUser> getUsers() {
+        return users;
+    }
 }

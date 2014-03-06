@@ -7,21 +7,21 @@ import com.zenika.fx.zwitter.model.ZwitterUser;
 
 abstract class ZweetMixin extends Zweet {
 
-  @JsonCreator
-  public ZweetMixin(@JsonProperty("source") ZwitterUser source, @JsonProperty("quote") String text) {
-    super(source, text);
-  }
+    @JsonCreator
+    public ZweetMixin(@JsonProperty("source") final ZwitterUser source, @JsonProperty("quote") final String text) {
+        super(source, text);
+    }
 
-  @Override
-  @JsonProperty("source")
-  public ZwitterUser getSource() {
-    return super.getSource();
-  }
+    @Override
+    @JsonProperty("source")
+    public ZwitterUser getSource() {
+        return super.getSource();
+    }
 
-  @Override
-  @JsonProperty("quote")
-  public String getText() {
-    return super.getText();
-  }
+    @Override
+    @JsonProperty("quote")
+    public String getText() {
+        return super.getText();
+    }
 
 }
