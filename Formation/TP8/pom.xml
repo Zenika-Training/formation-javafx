@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.zenika.javafx</groupId>
-	<artifactId>zwitter-sdk</artifactId>
+	<artifactId>zwitter-tp8</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -14,6 +14,7 @@
 		<name>zenika</name>
 	</organization>
 	<build>
+		<finalName>zwitter-app</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
 			<resource>
@@ -21,6 +22,18 @@
 			</resource>
 		</resources>
 		<plugins>
+			<plugin>
+				<groupId>com.zenjava</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<mainClass>com.zenika.fx.zwitter.Main</mainClass>
+					<!-- only required if signing the jar file -->
+					<keyStoreAlias>example-user</keyStoreAlias>
+					<keyStorePassword>example-password</keyStorePassword>
+					<allPermissions>true</allPermissions>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -30,18 +43,6 @@
 					<target>1.7</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
@@ -77,21 +78,9 @@
 	<dependencies>
 	
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.3.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.3.0</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>2.3.0</version>
+			<groupId>com.zenika.javafx</groupId>
+			<artifactId>zwitter-sdk</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 	
 	</dependencies>

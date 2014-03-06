@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<fx:root type="javafx.scene.layout.GridPane" maxHeight="400.0" maxWidth="-Infinity" minHeight="50.0" minWidth="300.0" prefHeight="100.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Label fx:id="userInfo1"
+    	prefWidth="300"
+    	maxHeight="200" maxWidth="1000" 
+    	GridPane.columnIndex="1" GridPane.rowIndex="0"
+    	GridPane.hgrow="ALWAYS" GridPane.vgrow="SOMETIMES" />
+    <Label fx:id="userInfo2"
+    	GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <TextArea fx:id="zweetArea" editable="false" wrapText="true" 
+    	style="-fx-background-color: transparent;" 
+    	minHeight="-Infinity" minWidth="-Infinity" 
+    	prefHeight="75.0" prefWidth="240" 
+   		maxHeight="200" maxWidth="1000" 
+     	GridPane.columnIndex="1" GridPane.rowIndex="2" 
+     	GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
+    <ImageView fx:id="userImg" fitHeight="64.0" fitWidth="64.0" 
+    	pickOnBounds="true" preserveRatio="true" x="0.0" y="0.0" 
+    	GridPane.columnIndex="0" GridPane.rowIndex="0"
+    	GridPane.rowSpan="3" 
+    	GridPane.halignment="CENTER" GridPane.valignment="CENTER"  
+    	GridPane.hgrow="NEVER" GridPane.vgrow="NEVER" />
+  </children>
+</fx:root>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import com.zenika.fx.zwitter.zweetui.SearchBox?>
+<?import javafx.scene.control.ProgressBar?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.zenika.fx.zwitter.MainController">
+  <!-- TODO Add Nodes -->
+  <bottom>
+    <HBox prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <TitledPane animated="true" text="Zweet!" HBox.hgrow="ALWAYS">
+          <content>
+            <AnchorPane id="AnchorPane" prefHeight="101.0" prefWidth="200.0">
+              <children>
+              	<ProgressBar fx:id="zweetCompletion" AnchorPane.topAnchor="6.0" AnchorPane.leftAnchor="0" maxWidth="50" maxHeight="10"/>
+                <Label fx:id="zweetCompletionText" AnchorPane.topAnchor="1.0" AnchorPane.leftAnchor="55.0" maxWidth="30" maxHeight="20" />
+                <Label text="/140" AnchorPane.topAnchor="1.0" AnchorPane.leftAnchor="90" maxHeight="20"/>
+                <TextArea fx:id="zweetArea" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="22.0" />
+                <Button onAction="#sendZweet" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="62.0" text="Send" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="22.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <StackPane prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <ListView fx:id="timeline" disable="false" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="350.0" prefWidth="300" StackPane.alignment="CENTER" />
+        <ProgressIndicator visible="false" maxHeight="50.0" maxWidth="50.0" progress="-1.0" style="-fx-progress-color: rgb(179, 12, 55);" />
+      </children>
+    </StackPane>
+  </center>
+  <top>
+    <SearchBox fx:id="searchBox"/>
+  </top>
+</BorderPane>
