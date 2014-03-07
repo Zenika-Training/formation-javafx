@@ -13,7 +13,7 @@ public class ZwitterBuilder {
 
     private Set<EventHandler<WorkerStateEvent>> onSuccessHandlers = new HashSet<>();
     private double delay = 1000;
-    private double period = 1000;
+    private double period = 2000;
 
     private ZwitterBuilder() {
         final EventHandler<WorkerStateEvent> onSuccessHandler = new EventHandler<WorkerStateEvent>() {
@@ -36,6 +36,10 @@ public class ZwitterBuilder {
     }
 
     public ZwitterBuilder withObservableList(final ObservableList<Zweet> zweets) {
+        return withObservableList(zweets, -1);
+    }
+
+    public ZwitterBuilder withObservableList(final ObservableList<Zweet> zweets, final int maxElements) {
         final EventHandler<WorkerStateEvent> onSuccessHandler = new EventHandler<WorkerStateEvent>() {
             @Override
             public void handle(final WorkerStateEvent workerStateEvent) {
@@ -43,6 +47,9 @@ public class ZwitterBuilder {
                 for (int i = zweetsFromWorker.size() - 1; i >= 0; i--) {
                     final Zweet zweet = zweetsFromWorker.get(i);
                     zweets.add(0, zweet);
+                }
+                if (maxElements > 0 && zweets.size() > maxElements) {
+                    zweets.remove(maxElements, zweets.size());
                 }
             }
         };

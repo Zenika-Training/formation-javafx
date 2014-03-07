@@ -45,9 +45,11 @@ public class ZwitterImpl implements Zwitter {
                 protected List<Zweet> call() throws Exception {
                     final List<Zweet> results = new ArrayList<>();
                     toPublish.drainTo(results);
-                    for (int i = 0; i < zweetsPerExecution; i++) {
-                        final Zweet zweet = generateZweet(zweetDb);
-                        results.add(zweet);
+                    if (results.isEmpty()) {
+                        for (int i = 0; i < zweetsPerExecution; i++) {
+                            final Zweet zweet = generateZweet(zweetDb);
+                            results.add(zweet);
+                        }
                     }
                     toPublish.clear();
                     return results;
@@ -61,9 +63,9 @@ public class ZwitterImpl implements Zwitter {
     }
 
     protected ZwitterService buildZwitterService(final double delay, final double period, final Collection<EventHandler<WorkerStateEvent>> onSuccessHandlers) {
-        final ZwitterService service = new ZwitterService(zweetsQueue, parseZweetDb(), 2);
-        zwitterService.setDelay(new Duration(delay));
-        zwitterService.setPeriod(new Duration(period));
+        final ZwitterService service = new ZwitterService(zweetsQueue, parseZweetDb(), 1);
+        service.setDelay(new Duration(delay));
+        service.setPeriod(new Duration(period));
 
         final EventHandler<WorkerStateEvent> onSuccessHandler = new EventHandler<WorkerStateEvent>() {
             @Override
@@ -73,7 +75,7 @@ public class ZwitterImpl implements Zwitter {
                 }
             }
         };
-        zwitterService.setOnSucceeded(onSuccessHandler);
+        service.setOnSucceeded(onSuccessHandler);
 
         return service;
     }
