@@ -29,27 +29,6 @@ public class MainController implements Initializable {
 
         timeline.setCellFactory(new ZweetCell());
 
-        timeline.setCellFactory(new Callback<ListView<Zweet>, ListCell<Zweet>>() {
-            @Override
-            public ListCell<Zweet> call(final ListView<Zweet> zweetListView) {
-                final ListCell<Zweet> cell = new ListCell<Zweet>() {
-                    private Text text;
-
-                    @Override
-                    public void updateItem(Zweet item, boolean empty) {
-                        super.updateItem(item, empty);
-                        if (!isEmpty()) {
-                            text = new Text(item.toString());
-                            text.wrappingWidthProperty().bind(zweetListView.widthProperty());
-                            setGraphic(text);
-                        }
-                    }
-                };
-
-                return cell;
-            }
-        });
-
         zwitter = ZwitterBuilder.create().withObservableList(list).build();
         zwitter.start();
     }

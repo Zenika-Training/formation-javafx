@@ -10,8 +10,7 @@ public class ZweetCell implements Callback<ListView<Zweet>, ListCell<Zweet>> {
 
     @Override
     public ListCell<Zweet> call(final ListView<Zweet> zweetListView) {
-        final ListCell<Zweet> cell = new ListCell<Zweet>();
-        {
+        final ListCell<Zweet> cell = new ListCell<Zweet>() {
             private Text text;
 
             @Override
@@ -19,7 +18,7 @@ public class ZweetCell implements Callback<ListView<Zweet>, ListCell<Zweet>> {
                 super.updateItem(item, empty);
                 if (!isEmpty()) {
                     text = new Text(item.toString());
-                    text.wrappingWidthProperty().bind(zweetListView.widthProperty());
+                    text.wrappingWidthProperty().bind(zweetListView.widthProperty().subtract(100));
                     setGraphic(text);
                 }
             }
