@@ -12,6 +12,7 @@ public class ZweetCell implements Callback<ListView<Zweet>, ListCell<Zweet>> {
         final ListCell<Zweet> cell = new ListCell<Zweet>() {
 
             private ZweetPane zweetPane;
+            private ZweetPaneFullJava zweetPaneFullJava;
 
             @Override
             public void updateItem(final Zweet item, final boolean empty) {
@@ -23,9 +24,15 @@ public class ZweetCell implements Callback<ListView<Zweet>, ListCell<Zweet>> {
                     } else {
                         zweetPane.setZweet(item);
                     }
+                    if (null == zweetPaneFullJava) {
+                        zweetPaneFullJava = new ZweetPaneFullJava();
+                    }
+
+                    zweetPaneFullJava.setZweet(item);
                     // text = new Text(item.toString());
                     // text.wrappingWidthProperty().bind(zweetListView.widthProperty().subtract(100));
                     setGraphic(zweetPane);
+                    // setGraphic(zweetPaneFullJava);
                 }
             }
         };
