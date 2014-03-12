@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 import com.zenika.fx.zwitter.model.Zweet;
+import com.zenika.fx.zwitter.model.ZwitterUser;
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
@@ -16,12 +17,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.util.Duration;
 
 public class MainController implements Initializable {
 
     @FXML
     private ListView<Zweet> timeline;
+
+    @FXML
+    private TextArea zweetArea;
 
     private Zwitter zwitter;
 
@@ -45,6 +50,13 @@ public class MainController implements Initializable {
     @FXML
     public void stop() {
         zwitter.stop();
+    }
+
+    @FXML
+    public void publish() {
+        ZwitterUser zwitterUser = new ZwitterUser("", "", "");
+        Zweet zweet = new Zweet(zwitterUser, zweetArea.getText());
+        zwitter.publish(zweet);
     }
 
     public static Transition createTransition(Node pane) {

@@ -31,10 +31,11 @@
 					<content>
 						<AnchorPane id="AnchorPane" prefHeight="101.0" prefWidth="200.0">
 							<children>
-								<TextArea maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" wrapText="true" AnchorPane.bottomAnchor="0.0"
+								<TextArea fx:id="zweetArea" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" wrapText="true" AnchorPane.bottomAnchor="0.0"
 										AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="0.0"/>
 								<Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="62.0" text="Send"
-										AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+										AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+										onAction="#publish"/>
 							</children>
 						</AnchorPane>
 					</content>
