@@ -47,18 +47,18 @@ public class MainController implements Initializable {
         zwitter.stop();
     }
 
-    public static Transition createTransition(Node pane) {
-        FadeTransition fade = new FadeTransition(Duration.seconds(1d), pane);
+    public static Transition createTransition(final Node pane) {
+        final FadeTransition fade = new FadeTransition(Duration.seconds(1d), pane);
         fade.setFromValue(0.5d);
         fade.setToValue(1d);
 
-        ScaleTransition scale1 = new ScaleTransition(Duration.millis(500d), pane);
+        final ScaleTransition scale1 = new ScaleTransition(Duration.millis(500d), pane);
         scale1.setFromX(0d);
         scale1.setToX(0.5);
         scale1.setFromY(0d);
         scale1.setToY(0.5);
 
-        ScaleTransition scale2 = new ScaleTransition(Duration.millis(500d), pane);
+        final ScaleTransition scale2 = new ScaleTransition(Duration.millis(500d), pane);
         scale2.setFromX(0.5);
         scale2.setFromY(0.5);
         scale2.setToX(1d);

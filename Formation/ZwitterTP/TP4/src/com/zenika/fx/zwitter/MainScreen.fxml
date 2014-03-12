@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.zenika.fx.zwitter.SearchBox?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -12,7 +12,16 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.zenika.fx.zwitter.MainController">
 
 	<top>
-		<SearchBox/>
+		<HBox prefHeight="-1.0" prefWidth="-1.0">
+			<children>
+				<TextField prefWidth="150.0" HBox.hgrow="ALWAYS" maxHeight="Infinity"/>
+				<Button mnemonicParsing="false" text="Search"/>
+				<Button mnemonicParsing="false" text="Start"
+						onAction="#start"/>
+				<Button mnemonicParsing="false" text="Stop"
+						onAction="#stop"/>
+			</children>
+		</HBox>
 	</top>
 
 	<center>
