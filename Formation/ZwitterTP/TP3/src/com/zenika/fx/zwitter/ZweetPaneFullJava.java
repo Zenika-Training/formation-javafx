@@ -4,6 +4,7 @@ import java.io.InputStream;
 
 import com.zenika.fx.zwitter.model.Zweet;
 import javafx.geometry.HPos;
+import javafx.geometry.Insets;
 import javafx.geometry.VPos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -36,6 +37,7 @@ public class ZweetPaneFullJava extends GridPane {
         zweetArea = new TextArea();
         zweetArea.setId("zweetArea");
         zweetArea.setPrefHeight(75);
+        zweetArea.setPrefWidth(75);
         add(zweetArea, 1, 2);
         setHgrow(zweetArea, Priority.ALWAYS);
         setVgrow(zweetArea, Priority.ALWAYS);
