@@ -4,10 +4,10 @@ import com.zenika.fx.zwitter.model.Zweet;
 
 public interface Zwitter {
 
-    void start();
+	void start();
 
-    void stop();
+	void stop();
 
-    void publish(final Zweet zweet);
+	void publish(final Zweet zweet);
 
 }
