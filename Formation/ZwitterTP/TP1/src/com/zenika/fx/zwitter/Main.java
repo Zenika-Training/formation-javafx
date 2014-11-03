@@ -1,12 +1,10 @@
 package com.zenika.fx.zwitter;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 
 public class Main extends Application {
 
@@ -26,9 +24,7 @@ public class Main extends Application {
 			primaryStage.setTitle("Zwitter");
 			primaryStage.show();
 
-			primaryStage.setOnCloseRequest(event -> {
-				controller.stop();
-			});
+			primaryStage.setOnCloseRequest(event -> controller.stop());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
