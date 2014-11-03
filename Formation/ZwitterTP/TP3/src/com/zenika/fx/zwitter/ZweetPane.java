@@ -6,6 +6,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.zenika.fx.zwitter.model.Zweet;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,6 +31,21 @@ public class ZweetPane extends GridPane implements Initializable {
     @FXML
     private TextArea zweetArea;
 
+	private StringProperty nomProperty = new SimpleStringProperty();
+
+	public String getNomProperty() {
+		return nomProperty.get();
+	}
+
+	public StringProperty nomPropertyProperty() {
+		return nomProperty;
+	}
+
+	public void setNomProperty(final String nomProperty) {
+		this.nomProperty.set(nomProperty);
+	}
+
+
     private Zweet zweet;
 
     public ZweetPane(final Zweet zweet) {
@@ -47,6 +64,7 @@ public class ZweetPane extends GridPane implements Initializable {
     @Override
     public void initialize(final URL url, final ResourceBundle resourceBundle) {
         setZweet(zweet);
+	    userInfo1.textProperty().bindBidirectional(nomProperty);
     }
 
     public Zweet getZweet() {
@@ -58,6 +76,7 @@ public class ZweetPane extends GridPane implements Initializable {
         Image userImage;
         try {
             final String img = zweet.getSource().getImg();
+	        getClass().getClassLoader().getResourceAsStream("");
             final InputStream inputStream = getClass().getResourceAsStream(img);
             userImage = new Image(inputStream);
         } catch (Exception e) {
