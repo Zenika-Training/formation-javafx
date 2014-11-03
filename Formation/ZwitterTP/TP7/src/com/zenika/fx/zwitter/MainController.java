@@ -17,8 +17,6 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.concurrent.WorkerStateEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -30,132 +28,128 @@ import javafx.util.Duration;
 
 public class MainController implements Initializable {
 
-    @FXML
-    private SearchBox searchBox;
+	@FXML
+	private SearchBox searchBox;
 
-    @FXML
-    private ListView<Zweet> timeline;
+	@FXML
+	private ListView<Zweet> timeline;
 
-    @FXML
-    private TextArea zweetArea;
+	@FXML
+	private TextArea zweetArea;
 
-    @FXML
-    private Label zweetCompletionText;
+	@FXML
+	private Label zweetCompletionText;
 
-    @FXML
-    private ProgressBar zweetCompletion;
+	@FXML
+	private ProgressBar zweetCompletion;
 
-    private Zwitter zwitter;
+	private Zwitter zwitter;
 
-    @Override
-    public void initialize(final URL url, final ResourceBundle resourceBundle) {
-        final ObservableList<Zweet> list = FXCollections.observableList(new LinkedList<Zweet>());
-        timeline.setItems(list);
+	@Override
+	public void initialize(final URL url, final ResourceBundle resourceBundle) {
+		final ObservableList<Zweet> list = FXCollections.observableList(new LinkedList<>());
+		timeline.setItems(list);
 
-        timeline.setCellFactory(new ZweetCell());
+		timeline.setCellFactory(new ZweetCell());
 
-        zwitter = ZwitterBuilder.create().withObservableList(list).build();
-        zwitter.start();
+		zwitter = ZwitterBuilder.create().withObservableList(list).build();
+		zwitter.start();
 
-        // implement search
-        searchBox.textProperty().addListener(new ChangeListener<String>() {
-            private SearchTask searchTask;
+		// implement search
+		searchBox.textProperty().addListener(new ChangeListener<String>() {
+			private SearchTask searchTask;
 
-            @Override
-            public void changed(ObservableValue<? extends String> obs, String oldValue, String newValue) {
-                if (newValue != null && newValue.length() > 0) {
-                    if (searchTask != null && searchTask.isRunning()) {
-                        searchTask.cancel();
-                    }
+			@Override
+			public void changed(final ObservableValue<? extends String> obs, final String oldValue, final String newValue) {
+				if (newValue != null && !newValue.isEmpty()) {
+					if (searchTask != null && searchTask.isRunning()) {
+						searchTask.cancel();
+					}
 
-                    searchTask = new SearchTask(list, newValue);
-                    searchTask.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
-                        public void handle(WorkerStateEvent wse) {
-                            @SuppressWarnings("unchecked") Set<Zweet> result = (Set<Zweet>) wse.getSource().getValue();
-                            ObservableList<Zweet> foundZweets = FXCollections.observableArrayList(result);
-                            timeline.setItems(foundZweets);
-                        }
-                    });
-                    new Thread(searchTask).start();
-                } else {
-                    if (searchTask != null && searchTask.isRunning()) {
-                        searchTask.cancel();
-                    }
-                    timeline.setItems(list);
-                }
-            }
-        });
+					searchTask = new SearchTask(list, newValue);
+					searchTask.setOnSucceeded(wse -> {
+						@SuppressWarnings("unchecked") final Set<Zweet> result = (Set<Zweet>) wse.getSource().getValue();
+						final ObservableList<Zweet> foundZweets = FXCollections.observableArrayList(result);
+						timeline.setItems(foundZweets);
+					});
+					new Thread(searchTask).start();
+				} else {
+					if (searchTask != null && searchTask.isRunning()) {
+						searchTask.cancel();
+					}
+					timeline.setItems(list);
+				}
 
-        final IntegerBinding zweetLengthProperty = new IntegerBinding() {
-            {
-                bind(zweetArea.textProperty());
-            }
+			}
+		});
 
-            @Override
-            protected int computeValue() {
-                if (null == zweetArea.getText() || zweetArea.getText().isEmpty()) {
-                    return 0;
-                }
-                return zweetArea.getText().length();
-            }
-        };
+		final IntegerBinding zweetLengthProperty = new IntegerBinding() {
+			{
+				bind(zweetArea.textProperty());
+			}
 
-        zweetCompletionText.textProperty().bind(zweetLengthProperty.asString());
-        zweetCompletion.progressProperty().bind(zweetLengthProperty.divide(140d));
+			@Override
+			protected int computeValue() {
+				if (null == zweetArea.getText() || zweetArea.getText().isEmpty()) {
+					return 0;
+				}
+				return zweetArea.getText().length();
+			}
+		};
 
-        zweetCompletion.getStyleClass().add("completion");
-        zweetCompletionText.getStyleClass().add("completion");
-        zweetLengthProperty.addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(final ObservableValue<? extends Number> paramObservableValue, final Number oldValue, final Number newValue) {
-                if (140 < newValue.intValue()) {
-                    zweetCompletion.getStyleClass().addAll("overflow");
-                    zweetCompletionText.getStyleClass().addAll("overflow");
-                } else {
-                    zweetCompletion.getStyleClass().removeAll("overflow");
-                    zweetCompletionText.getStyleClass().removeAll("overflow");
-                }
-            }
-        });
-    }
+		zweetCompletionText.textProperty().bind(zweetLengthProperty.asString());
+		zweetCompletion.progressProperty().bind(zweetLengthProperty.divide(140d));
 
-    @FXML
-    public void start() {
-        zwitter.start();
-    }
+		zweetCompletion.getStyleClass().add("completion");
+		zweetCompletionText.getStyleClass().add("completion");
+		zweetLengthProperty.addListener((paramObservableValue, oldValue, newValue) -> {
+			if (140 < newValue.intValue()) {
+				zweetCompletion.getStyleClass().addAll("overflow");
+				zweetCompletionText.getStyleClass().addAll("overflow");
+			} else {
+				zweetCompletion.getStyleClass().removeAll("overflow");
+				zweetCompletionText.getStyleClass().removeAll("overflow");
+			}
+		});
+	}
 
-    @FXML
-    public void stop() {
-        zwitter.stop();
-    }
+	@FXML
+	public void start() {
+		zwitter.start();
+	}
 
-    @FXML
-    public void publish() {
-        final ZwitterUser zwitterUser = new ZwitterUser("", "", "");
-        final Zweet zweet = new Zweet(zwitterUser, zweetArea.getText());
-        zwitter.publish(zweet);
-    }
+	@FXML
+	public void stop() {
+		zwitter.stop();
+	}
 
-    public static Transition createTransition(final Node pane) {
-        final FadeTransition fade = new FadeTransition(Duration.seconds(1d), pane);
-        fade.setFromValue(0.5d);
-        fade.setToValue(1d);
+	@FXML
+	public void publish() {
+		final ZwitterUser zwitterUser = new ZwitterUser("", "", "");
+		final Zweet zweet = new Zweet(zwitterUser, zweetArea.getText());
+		zwitter.publish(zweet);
+	}
 
-        final ScaleTransition scale1 = new ScaleTransition(Duration.millis(500d), pane);
-        scale1.setFromX(0d);
-        scale1.setToX(0.5);
-        scale1.setFromY(0d);
-        scale1.setToY(0.5);
+	public static Transition createTransition(final Node pane) {
+		final FadeTransition fade = new FadeTransition(Duration.seconds(1d), pane);
+		fade.setFromValue(0.5d);
+		fade.setToValue(1d);
 
-        final ScaleTransition scale2 = new ScaleTransition(Duration.millis(500d), pane);
-        scale2.setFromX(0.5);
-        scale2.setFromY(0.5);
-        scale2.setToX(1d);
-        scale2.setToY(1d);
-        scale2.setCycleCount(3);
-        scale2.setAutoReverse(true);
+		final ScaleTransition scale1 = new ScaleTransition(Duration.millis(500d), pane);
+		scale1.setFromX(0d);
+		scale1.setToX(0.5);
+		scale1.setFromY(0d);
+		scale1.setToY(0.5);
 
-        return new ParallelTransition(fade, new SequentialTransition(scale1, scale2));
-    }
+		final ScaleTransition scale2 = new ScaleTransition(Duration.millis(500d), pane);
+		scale2.setFromX(0.5);
+		scale2.setFromY(0.5);
+		scale2.setToX(1d);
+		scale2.setToY(1d);
+		scale2.setCycleCount(3);
+		scale2.setAutoReverse(true);
+
+		return new ParallelTransition(fade, new SequentialTransition(scale1, scale2));
+	}
 
 }
