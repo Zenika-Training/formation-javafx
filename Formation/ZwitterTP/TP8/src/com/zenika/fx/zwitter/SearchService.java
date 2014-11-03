@@ -13,37 +13,37 @@ import javafx.concurrent.Task;
 
 public class SearchService extends Service<Set<Zweet>> {
 
-    private final StringProperty searchTextProperty = new SimpleStringProperty();
+	private final StringProperty searchTextProperty = new SimpleStringProperty();
 
-    public String getSearchText() {
-        return searchTextProperty.get();
-    }
+	public String getSearchText() {
+		return searchTextProperty.get();
+	}
 
-    public void setSearchText(final String text) {
-        searchTextProperty.set(text);
-    }
+	public void setSearchText(final String text) {
+		searchTextProperty.set(text);
+	}
 
-    public StringProperty searchTextProperty() {
-        return searchTextProperty;
-    }
+	public StringProperty searchTextProperty() {
+		return searchTextProperty;
+	}
 
-    private final ObjectProperty<List<Zweet>> sourceProperty = new SimpleObjectProperty<>();
+	private final ObjectProperty<List<Zweet>> sourceProperty = new SimpleObjectProperty<>();
 
-    public List<Zweet> getSource() {
-        return sourceProperty.get();
-    }
+	public List<Zweet> getSource() {
+		return sourceProperty.get();
+	}
 
-    public void setSource(final List<Zweet> source) {
-        sourceProperty.set(source);
-    }
+	public void setSource(final List<Zweet> source) {
+		sourceProperty.set(source);
+	}
 
-    public ObjectProperty<List<Zweet>> sourceProperty() {
-        return sourceProperty;
-    }
+	public ObjectProperty<List<Zweet>> sourceProperty() {
+		return sourceProperty;
+	}
 
-    @Override
-    protected Task<Set<Zweet>> createTask() {
-        // capturer la valeur courante du paramétrage du service via constructeur
-        return new SearchTask(getSource(), getSearchText());
-    }
+	@Override
+	protected Task<Set<Zweet>> createTask() {
+		// capturer la valeur courante du paramétrage du service via constructeur
+		return new SearchTask(getSource(), getSearchText());
+	}
 }

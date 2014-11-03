@@ -9,24 +9,24 @@ import javafx.concurrent.Task;
 
 public class SearchTask extends Task<Set<Zweet>> {
 
-    private final List<Zweet> source;
-    private final String keyword;
+	private final List<Zweet> source;
+	private final String keyword;
 
-    public SearchTask(final List<Zweet> source, final String keyword) {
-        this.source = source;
-        this.keyword = keyword;
-    }
+	public SearchTask(final List<Zweet> source, final String keyword) {
+		this.source = source;
+		this.keyword = keyword;
+	}
 
-    @Override
-    protected Set<Zweet> call() throws Exception {
-        final Set<Zweet> result = new HashSet<>(source.size());
-        for (final Zweet zweet : source) {
-            Thread.sleep(100);
-            if (zweet.getText().contains(keyword)) {
-                result.add(zweet);
-            }
-        }
-        return result;
-    }
+	@Override
+	protected Set<Zweet> call() throws Exception {
+		final Set<Zweet> result = new HashSet<>(source.size());
+		for (final Zweet zweet : source) {
+			Thread.sleep(100);
+			if (zweet.getText().contains(keyword)) {
+				result.add(zweet);
+			}
+		}
+		return result;
+	}
 
 }
