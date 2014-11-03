@@ -10,16 +10,16 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.zenika.fx.zwitter.MainController">
 
 	<top>
-		<HBox prefHeight="-1.0" prefWidth="-1.0">
+		<HBox>
 			<children>
-				<TextField prefWidth="200.0"/>
+				<TextField HBox.hgrow="ALWAYS" prefWidth="200.0" maxWidth="Infinity"/>
 				<Button mnemonicParsing="false" text="Search"/>
 			</children>
 		</HBox>
 	</top>
 
 	<center>
-		<AnchorPane prefHeight="-1.0" prefWidth="-1.0">
+		<AnchorPane>
 			<children>
 				<ListView fx:id="timeline" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
 						AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>

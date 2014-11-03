@@ -13,29 +13,29 @@ import javafx.scene.control.ListView;
 
 public class MainController implements Initializable {
 
-    @FXML
-    private ListView<Zweet> timeline;
+	@FXML
+	private ListView<Zweet> timeline;
 
-    private Zwitter zwitter;
+	private Zwitter zwitter;
 
-    @Override
-    public void initialize(final URL url, final ResourceBundle resourceBundle) {
-        final ObservableList<Zweet> timelineModel = FXCollections.observableList(new LinkedList<Zweet>());
-        timeline.setItems(timelineModel);
+	@Override
+	public void initialize(final URL url, final ResourceBundle resourceBundle) {
+		final ObservableList<Zweet> timelineModel = FXCollections.observableList(new LinkedList<>());
+		timeline.setItems(timelineModel);
 
-        // ceci est un exemple d'utilisation de Zwitter
-        zwitter = ZwitterBuilder.create().withObservableList(timelineModel).build();
-        zwitter.start();
-    }
+		// ceci est un exemple d'utilisation de Zwitter
+		zwitter = ZwitterBuilder.create().withObservableList(timelineModel).build();
+		zwitter.start();
+	}
 
-    @FXML
-    public void start() {
-        zwitter.start();
-    }
+	@FXML
+	public void start() {
+		zwitter.start();
+	}
 
-    @FXML
-    public void stop() {
-        zwitter.stop();
-    }
+	@FXML
+	public void stop() {
+		zwitter.stop();
+	}
 
 }
