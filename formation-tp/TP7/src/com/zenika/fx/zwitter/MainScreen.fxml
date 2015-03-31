@@ -33,9 +33,8 @@
 			<content>
 				<AnchorPane fx:id="zweetZone" prefHeight="101.0" prefWidth="200.0">
 					<children>
-						<ProgressBar fx:id="zweetCompletion" AnchorPane.topAnchor="6.0" AnchorPane.leftAnchor="0" maxWidth="50" maxHeight="10"/>
+						<ProgressBar fx:id="zweetCompletion" AnchorPane.topAnchor="1.0" AnchorPane.leftAnchor="0" maxWidth="50" maxHeight="10"/>
 						<Label fx:id="zweetCompletionText" AnchorPane.topAnchor="1.0" AnchorPane.leftAnchor="55.0" maxWidth="80" maxHeight="20"/>
-						<!-- <Label text="/140" AnchorPane.topAnchor="1.0" AnchorPane.leftAnchor="90" maxHeight="20"/>-->
 						<TextArea fx:id="zweetArea" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" wrapText="true" AnchorPane.bottomAnchor="0.0"
 								AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="22.0"/>
 						<Button fx:id="zweetSend" onAction="#publish" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="62.0" text="Send"

@@ -29,12 +29,16 @@
 				<configuration>
 					<mainClass>com.zenika.fx.zwitter.Main</mainClass>
 					<allPermissions>true</allPermissions>
+					<!-- only required if signing the jar file -->
+					<keyStoreAlias>jks</keyStoreAlias>
+					<keyStorePassword>keystore</keyStorePassword>
+					<keyStore>keystore.jks</keyStore>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.2</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -42,7 +46,22 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.6.1</version>
 				<configuration>
 					<filesets>
 						<fileset>
@@ -54,7 +73,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.2</version>
+				<version>2.9</version>
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>

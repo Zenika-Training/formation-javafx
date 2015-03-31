@@ -58,7 +58,7 @@ public class ZweetPane extends GridPane implements Initializable {
 		Image userImage;
 		try {
 			final String img = zweet.getSource().getImg();
-			final InputStream inputStream = getClass().getResourceAsStream("avatars/"+img);
+			final InputStream inputStream = getClass().getResourceAsStream("avatars/" + img);
 			userImage = new Image(inputStream);
 		} catch (Exception e) {
 			final InputStream inputStream = getClass().getResourceAsStream("avatars/anonymous.png");

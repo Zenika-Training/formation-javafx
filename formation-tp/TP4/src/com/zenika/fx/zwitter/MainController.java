@@ -52,13 +52,13 @@ public class MainController implements Initializable {
 		fade.setFromValue(0.5d);
 		fade.setToValue(1d);
 
-		final ScaleTransition scale1 = new ScaleTransition(Duration.millis(50d), pane);
+		final ScaleTransition scale1 = new ScaleTransition(Duration.millis(200d), pane);
 		scale1.setFromX(0d);
 		scale1.setToX(0.5);
 		scale1.setFromY(0d);
 		scale1.setToY(0.5);
 
-		final ScaleTransition scale2 = new ScaleTransition(Duration.millis(50d), pane);
+		final ScaleTransition scale2 = new ScaleTransition(Duration.millis(200d), pane);
 		scale2.setFromX(0.5);
 		scale2.setFromY(0.5);
 		scale2.setToX(1d);
