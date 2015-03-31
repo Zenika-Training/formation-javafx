@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zenika.demo.events.SampleController">
+   <bottom>
+   </bottom>
+   <center>
+      <Button fx:id="bouton" alignment="CENTER" mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets top="5.0" />
+         </opaqueInsets>
+      </Button>
+   </center>
+</BorderPane>

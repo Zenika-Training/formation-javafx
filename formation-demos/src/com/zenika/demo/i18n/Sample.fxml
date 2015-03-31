@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zenika.demo.i18n.SampleController">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="%key.language">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#setFr" text="%key.fr" />
+						<MenuItem mnemonicParsing="false" onAction="#setEn" text="%key.en" />
+						<MenuItem mnemonicParsing="false" onAction="#setAr" text="%key.ar" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+   <center>
+      <TextArea fx:id="text" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
