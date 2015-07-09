@@ -1,0 +1,52 @@
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+	-fx-padding:0;
+}
+
+.zweetUser {
+	-fx-text-fill: rgb(179, 12, 55);
+}
+
+.zweetUsername {
+	-fx-font-style: italic;
+	-fx-font-size: 10.0pt;
+	-fx-text-fill: grey ;
+}
+
+
+.search-box {
+    -fx-min-height: 24;
+    -fx-max-height: 24;
+
+    -fx-background-image:  url('images/middle.png'), url('images/left.png'), url('images/right.png') ;
+    -fx-background-position: center, left, right ;
+    -fx-background-repeat: repeat-x, no-repeat, no-repeat;
+}
+
+.search-box .button {
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+    -fx-min-width: 24;
+
+    -fx-background-image: url('images/search-clear.png');
+}
+.search-box .button:hover {
+    -fx-background-image: url('images/search-clear-over.png');
+}
+
+.search-box .text-field {
+    -fx-background-color: transparent;
+    -fx-padding: 0 30 0 24;
+
+    -fx-min-height: 24;
+    -fx-max-height: 24;
+    -fx-row-valignment: center;
+	-fx-prompt-text-fill: grey;
+
+
+    -fx-font-size: 12;
+}
