@@ -61,7 +61,7 @@ _--pause--
 
 _== Repas ==_
 
-* __7. Animations __
+* __7. Animations__
 * TP4
 
 _--pause--_
