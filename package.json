@@ -1,0 +1,22 @@
+{
+  "name": "formation-javafx",
+  "description": "Développer une application de gestion avec JavaFX 8",
+  "version": "0.0.1",
+  "author": "Zenika",
+  "homepage": "http://zenika.com/formation-javafx-8.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zenika/formation-javafx"
+  },
+  "private": true,
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "gulp": "^3.9.0",
+    "zenika-formation-framework": "git+https://github.com/Zenika/Formation--Framework.git#tags/0.4.6"
+  },
+  "config": {
+    "deploy": {
+      "name": "zen-formation-modele"
+    }
+  }
+}
