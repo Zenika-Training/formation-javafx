@@ -1,5 +1,8 @@
-libs
-target
+node_modules
 .idea
+PDF
+dist
+.DS_Store
+/build
 *.iml
-out/
+npm-debug.log

@@ -1,0 +1,22 @@
+{
+  "name": "Modele",
+  "description": "Formation Modèle",
+  "version": "0.0.1",
+  "author": "Zenika",
+  "homepage": "https://www.zenika.com/Formation/notre-catalogue-formation.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zenika/Formation--Modele"
+  },
+  "private": true,
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "gulp": "^3.9.0",
+    "zenika-formation-framework": "git+https://github.com/Zenika/Formation--Framework.git#tags/0.4.6"
+  },
+  "config": {
+    "deploy": {
+      "name": "zen-formation-modele"
+    }
+  }
+}
