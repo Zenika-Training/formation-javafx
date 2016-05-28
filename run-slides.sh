@@ -7,4 +7,4 @@ cd "$SCRIPT_DIR" || exit 1
 
 npm install || exit 1
 
-exec ./node_modules/zenika-formation-framework/node_modules/grunt-cli/bin/grunt
+exec ./node_modules/zenika-formation-framework/node_modules/grunt-cli/bin/grunt $*

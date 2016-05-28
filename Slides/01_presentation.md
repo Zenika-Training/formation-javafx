@@ -91,16 +91,20 @@ API vidéo et audio**
 
 - Utilisable sur JVM ARM Java Embedded
 - Porté sur Android / iOS
-- Nouvelles API 3D
-- Nouveaux widgets
-- Open source!
+- Nouvelles API 3D et nouveaux widgets
 - Meilleur support de HTML5
 - Intégration avec Swing efficace
+- Open source!
+
+<br>
+
+- Passage de relais vers un support communautaire (Gluon, ...)
+
 
 <br>
 **Java 8 représente une évolution majeure pour
   ORACLE, JavaFX 8 fait partie des innovations
-  poussées**
+  mises en avant**
 
 
 

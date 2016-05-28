@@ -249,7 +249,7 @@ Scene scene = new Scene(root,400,400);
 - *Il est possible de récupérer des paramètres contextuels dans le Controller*
   - Exemple : un événement en paramètre 
    
-        public void maMethode(TotoEvent event) { … }
+        public void maMethode(MonEvent event) { … }
 
 
 
@@ -263,7 +263,7 @@ Example.fxml
 </GridPane>
 ```
 
-FXMLExampleController.java
+FXMLExampleController.java 
 
 ```java
 package com.zenika.javafx.example;
@@ -404,9 +404,7 @@ Des éléments et contrôles complexes pourront être ajoutés en JAVA au besoin
 
 
 
-
 ## Ship it!
-
 
 - *Mode Standalone*
     - Livraison d'un JAR exécutable
@@ -423,6 +421,8 @@ Des éléments et contrôles complexes pourront être ajoutés en JAVA au besoin
 
 
 
-<!-- .slide: class="questions" -->
+<!-- .slide: class="page-questions" -->
 
 
+
+<!-- .slide: class="page-tp1" -->
