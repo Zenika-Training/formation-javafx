@@ -1,12 +1,12 @@
 {
-  "name": "Modele",
-  "description": "Formation Modèle",
+  "name": "formation-javafx",
+  "description": "Développer une application de gestion avec JavaFX 8",
   "version": "0.0.1",
   "author": "Zenika",
-  "homepage": "https://www.zenika.com/Formation/notre-catalogue-formation.html",
+  "homepage": "http://zenika.com/formation-javafx-8.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zenika/Formation--Modele"
+    "url": "https://github.com/Zenika/formation-javafx"
   },
   "private": true,
   "dependencies": {

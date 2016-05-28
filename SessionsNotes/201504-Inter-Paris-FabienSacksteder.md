@@ -1,21 +1,5 @@
-JavaFX
-======
-
-Repository de Zenika pour tous les éléments concernant JavaFX: exemples, POC et bien sûr formation.
-
-Kit de formateur JavaFX
-=======================
-
-- Installateurs de JDK 8 (32 ou 64 bits suivant parc machines) pour Windows sur le site d'Oracle
-- Installateurs all-in-one de e(fx)clipse 32 et 64 bits pour Windows: http://efxclipse.bestsolution.at/
-- Installateur de SceneBuilder 2.x pour Windows sur le site d'Oracle
-- Checkout complet de ce github repository
-- Facultatif: installateurs de Intellij 12+ pour Windows (community edition)
-- Installateur de JavaFX Ensemble: présent dans les samples JavaFX sur le site d'Oracle (page des downloads du JDK)
-
-
-Planning indicatif de la formation
-==================================
+Planning indicatif de la formation JavaFX-8
+===========================================
 
 Jour 1
 ------
@@ -57,7 +41,7 @@ Jour 2
 _--pause--
 
 * __6. Enrichir vos interfaces__
-* Démo : tree manipulation? sacling?
+* Démo : tree manipulation? scaling?
 
 _== Repas ==_
 

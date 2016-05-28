@@ -1,17 +1,26 @@
-# Titre de la formation
+# Développer une application de gestion avec JAVAFX 8 
 
 <!-- .slide: class="page-title" -->
 
 
 
-## Sommaire
+## Sommaire - Jour 1
 
 <!-- .slide: id="master-toc" class="toc" -->
 
-- [Syntaxe de base](#/1)
-- [Code et tableaux](#/2)
-- [Positionnement des images](#/3)
-- [Animations et syntaxe avancée](#/4)
+- [Présentation de JavaFX 8](#/1)
+- [Première application](#/2)
+- [Composants et layouts](#/3)
+- [Données et architecture](#/4)
+
+- [Enrichir vos interfaces](#/5)
+- [Animation](#/6)
+- [Concurrence](#/7)
+
+- [Les événements](#/8)
+- [Intégration avec Swing](#/9)
+- [Tests et outils](#/10)
+- [Pour aller plus loin](#/11)
 
 
 

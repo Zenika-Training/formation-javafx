@@ -1,6 +1,6 @@
-Domain: [Java & Architecture, DevOps, Agilité, BigData & NoSQL, Web, Craftsmanship, IoT & Mobilité]
+Domain: [Java & Architecture]
 
-Sub-domain: ?
+Sub-domain: Desktop
 
 # Training title
 ## Sub-title

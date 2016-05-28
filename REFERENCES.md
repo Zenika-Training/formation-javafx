@@ -2,26 +2,17 @@
 
 Ce fichier liste les références utiles pour la préparation ou l'approfondissement de la formation.
 
-## Ouvrages
+## Kit du formateur
 
-Liste des livres sur le sujet.
+Outils nécessaires.
 
-- [Ouvrage 1](http://ouvrage1) Explication de l'ouvrage.
-- [Ouvrage 2](http://ouvrage2) Explication de l'ouvrage.
-- ...
+- Installateurs de JDK 8 (32 ou 64 bits suivant parc machines) pour Windows sur le site d'Oracle
+- Installateurs all-in-one de e(fx)clipse 32 et 64 bits pour Windows: http://efxclipse.bestsolution.at/
+- Installateur de SceneBuilder 2.x pour Windows sur le site d'Oracle
+- Checkout complet de ce github repository
+- Facultatif: installateurs de IntelliJ pour Windows (community edition)
+- Installateur de JavaFX Ensemble: présent dans les samples JavaFX sur le site d'Oracle (page des downloads du JDK)
 
-## Articles
+## Liens utiles
 
-Liste des articles sur le sujet.
-
-- [Article 1](http://article1) Explication de l'article.
-- [Article 2](http://article2) Explication de l'article.
-- ...
-
-## Outils
-
-Outils utiles.
-
-- [Outil 1](http://outil1) Explication de l'outil.
-- [Outil 2](http://outil2) Explication de l'outil.
-- ...
+<TODO>
