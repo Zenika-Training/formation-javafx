@@ -98,13 +98,22 @@ public class FirstScreen extends Application {
 
 ## Le Scene Graph : définir les éléments de la vue
 
+*Les éléments d'une scène constituent le Scene Graph*
+
 - Arbre de composants JavaFX avec un composant racine 
 - Décrit le contenu d'une Scene 
 - Chaque élément de l'arbre est un « *Node* » 
 - Chaque Node peut avoir des enfants (pattern composite) 
-- Exemple : 
 
-TODO : IMAGES
+<figure style="position: absolute; bottom:15%; left:10%;">
+    <img src="ressources/02_scenegraph_abstract.png" alt="Vision abtraite du Scene Graph" />
+</figure>
+
+<figure style="position: absolute; bottom:15%; right:10%;">
+    <img src="ressources/02_scenegraph_example.png" alt="Exemple de Scene Graph" />
+</figure>
+
+
 
 
 
@@ -124,39 +133,45 @@ TODO : IMAGES
 
 
 
-## Exemple d'utilisation : GridPane avec layouts en rows / columns
+## Exemple d'utilisation
+
+GridPane avec layouts en rows / columns
 
 ```xml
-<GridPane fx:controller="fxmlexample.FXMLExampleController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
-    
-    <Text text="Welcome"
-        GridPane.columnIndex="0" GridPane.rowIndex="0"
-        GridPane.columnSpan="2"/>
-    
-    <Label text="User Name:"
-        GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    
-    <TextField
-        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-    
-    <Label text="Password:"
-        GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    
-    <PasswordField fx:id="passwordField"
-        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-        <Button fx:id="okButton" GridPane.columnSpan="2"
-                GridPane.columnIndex="0" GridPane.rowIndex="3" />
+<GridPane alignment="center" hgap="10" styleClass="root" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="fxmlexample.FXMLExampleController">
+    <padding><Insets bottom="10" left="25" right="25" top="25" /></padding>
+
+    <Text id="welcome-text" text="Welcome" 
+       GridPane.columnIndex="0" GridPane.columnSpan="2" 
+       GridPane.rowIndex="0" />
+
+    <Label text="User Name:" 
+       GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+    <TextField 
+       GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Password:" 
+       GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+    <PasswordField fx:id="passwordField" 
+       GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
 </GridPane>
+
 ```
- 
-TODO: IMAGE
+
+<figure style="position: absolute; top:50%; right:5%; width: 25%;">
+    <img src="ressources/02_login.png" alt="Login" />
+</figure>
 
 
 
 ## L'outil SceneBuilder : What You See Is What You Get (WYSIWYG)
 
-TODO: IMAGE
+<figure>
+    <img src="ressources/02_scenebuilder.png" alt="Scene Builder 8.2"/>
+</figure>
 
 
 
@@ -183,12 +198,21 @@ TODO: IMAGE
 
 *FXMLLoader* est dédié au chargement des fichiers FXML et leur transformation en arbre de composants 
 
-TODO: code / image
+```java
+//dans la méthode start, au lieu d'instancier directement root
+URL location = getClass().getResource("zenfxapp.fxml");
+FXMLLoader fxmlLoader = new FXMLLoader(location);
+BorderPane root = (BorderPane) fxmlLoader.load();
 
-- Ou utiliser FXMLLoader ? 
+//on peut aussi récupérer une instance du contrôleur
+MyController controller = (MyController)fxmlLoader.getController();
 
+//reste du chargement de la scène
+Scene scene = new Scene(root,400,400);
+```
+
+- Où utiliser FXMLLoader ? 
     - Soit lors de l'instanciation d'un composant déclaré via FXML dans le composant parent 
-
     - Soit dans le constructeur d'un composant qui se décrit en FXML 
 
 
@@ -198,13 +222,11 @@ TODO: code / image
 *FXML First ou Java First?*
 <br>
 
-- Plusieurs découpages d'application sont possibles avec FXML 
+- *Plusieurs niveaux de granularité* sont possibles avec FXML 
     - 1 FXML = 1 « page » de l'application 
     - 1 FXML = 1 composant de l'application (plusieurs composants par page) 
 
-
-- Un fichier FXML peut charger un autre fichier FXML via la balise &lt;fxml:include&gt;
-
+- Un fichier FXML peut charger un autre fichier FXML via la balise *&lt;fxml:include&gt;*
 
 - Deux choix sont possibles pour les chargements en cascade de FXML 
     - *FXML First* : Les fichiers FXML explicitent les fichiers enfants à charger (fxml:include)
@@ -233,17 +255,35 @@ TODO: code / image
 
 ## Exemple d'interactions : lier le FXML à son contrôleur
 
-TODO: exemple FXML et controleur
+Example.fxml
 
-- Un appel de méthode est présent dans le FXML via # 
+```xml
+<GridPane [...] fx:controller="com.zenika.javafx.example.FXMLExampleController">
+   <Button onAction="#okButtonHandler" text="OK" [...] />
+</GridPane>
+```
 
+FXMLExampleController.java
+
+```java
+package com.zenika.javafx.example;
+import javafx.fxml.FXML;
+
+public class FXMLExampleController {
+    @FXML
+    void okButtonHandler(ActionEvent event) {
+    ...
+    }
+}
+```
+
+- Un appel de méthode est présent dans le FXML via *\#* 
 - La méthode en question est codée dans le Controller 
-
 - Elle prend un ActionEvent en paramètre 
 
 
 
-## Exemple d'interactions : autre technique possible
+## Exemple d'interactions : injection de composants
 
 
 - *Il est possible d'injecter des composants dans un Controller *
@@ -255,19 +295,49 @@ TODO: exemple FXML et controleur
 
 - *En implémentant l'interface Initializable de JavaFX*
     - La méthode **initialize()** est appelée par JavaFX à la fin de la construction de la vue 
-    - On peut donc ajouter des eventHandler de façon programmatique, en Java 
+    - On peut donc ajouter des gestionnaires d'événements de façon programmatique, en Java 
 
 
 
-## Exemple d'interactions : autre technique possible
+## Exemple d'interactions : injection de composants
 
-TODO: exemple de code
+Injection du bouton:
+
+```xml
+<GridPane [...] fx:controller="com.zenika.javafx.example.FXMLExampleController">
+   <children>
+      <Button fx:id="okButton" mnemonicParsing="false" text="OK" />
+   </children>
+</GridPane>
+```
+
+Et handler ajouté en java:
+
+```java
+public class FXMLExampleController implements Initializable {
+
+    @FXML
+    private Button okButton;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        okButton.setOnAction( actionEvent -> System.out.println("C'est OK !") );
+
+    }
+}
+```
 
 
 
 ## Construction par code Java: L'alternative procédurale
 
 - *Construction sans FXML, "comme en Swing"*
+
+```java
+final VBox rootNode = new VBox();
+rootNode.getChildren().add(new Label("Hello World !"));
+```
 
 <br>
 
@@ -296,28 +366,29 @@ TODO: exemple de code
 
 <br>
 
-La majorité des vues devraient donc, dans un projet, être en FXML
+Dans un projet JavaFX, la majorité des vues devraient être en FXML
 
-Des éléments et contrôles complexes en Java pourront être ajoutés au besoin
-
+Des éléments et contrôles complexes pourront être ajoutés en JAVA au besoin
 
 
 
 ## Les déploiements : Plusieurs options possibles
 
-- 4 modes disponibles avec des livrables différents 
+- *4 modes disponibles avec des livrables différents* 
+  - *Standalone* : package JAR "standalone"
+  - *Self-contained* : packagé selon l'OS avec une copie de la JRE
+  - *Embedded* : Embarquée dans un navigateur (applet) 
+  - Java *Web Start*
 
-- Gestion des mises à jour applicatives sous conditions 
-
-- Possibilité de construire un installateur suivant l'OS cible 
-
-TODO: IMAGE
+<figure style="position: absolute; bottom: 2%; right:0%; width: 48%;">
+    <img src="ressources/02_deploy_type_properties.png" alt="Types de déploiement"/>
+</figure>
 
 
 
 ## Ship it!
 
-- *Le mode Self-contained*
+- *Le mode Self-contained (ou natif)*
     - Création d'un installateur standard pour un OS donné 
     - Inclut le JRE nécessaire 
     - Livrable volumineux mais standard pour l'OS 
@@ -333,14 +404,18 @@ TODO: IMAGE
 
 
 
+
 ## Ship it!
+
 
 - *Mode Standalone*
     - Livraison d'un JAR exécutable
-    - Package de l'ensemble des dépendances dans un seul JAR 
-    - Package des classes applicatives dans un seul JAR + livraison des dépendances JAR externes 
+      - Package de l'ensemble des dépendances dans un seul JAR 
+      - Package des classes applicatives dans un seul JAR + livraison des dépendances JAR externes 
 
-  TODO: IMAGE
+<figure>
+    <img src="ressources/02_standalone.png" alt="Types de déploiement" width="60%"/>
+</figure>
 
 - *Le mode WebStart*
     - Déploiement sur un serveur Web pour gestion automatique des versions 
@@ -349,3 +424,5 @@ TODO: IMAGE
 
 
 <!-- .slide: class="questions" -->
+
+
