@@ -11,7 +11,6 @@ Android et iOS comme cibles?
         - Pas de JVM Android ou iOS 
         - Englobe la partie toolkit JavaFX 
         - Le livrable est donc plus volumineux qu'une application native "classique" 
-
 JavaFX sur Android
     - Prérequis 
         - Android SDK 
@@ -24,7 +23,6 @@ JavaFX sur Android
         - Possibilité d'accéder aux fonctions natives d'Android depuis l'application JavaFX 
         - Promesse de réutilisation de code entre Desktop et Android tenue! 
 OpenJFX porté sur Dalvik
-
 JavaFX sur iOS
     - Prérequis 
         - Votre application JavaFX compilée en Java 7 ou 6 
@@ -37,7 +35,6 @@ JavaFX sur iOS
         - Code natif produit optimisé 
         - Utilise LLVM comme compilateur 
 RoboVM à la rescousse
-
 JavaFX sur iOS
     - Avantages 
         - Support de RoboVM: un acteur important 
@@ -48,11 +45,9 @@ JavaFX sur iOS
         - Complexifie le build 
         - Il est aussi possible d'utiliser RoboVM pour faire des UI natives: JavaFX est-il pertinent sur une cible iOS / Android uniquement? 
 Conclusions
-
 Architecture N-tiers
 Il peut être intéressant d'avoir un framework pour faciliter les synchronisations avec un serveur distant des données dans un mode distribué (comme Granite)
 Schéma
-
 Granite Data Services
     - Framework d'intégration serveur pour JavaFX, Android et Flex 
     - Permet de faciliter les échanges avec un serveur Java 
@@ -63,7 +58,6 @@ Granite Data Services
     - Version simple gratuite open source 
     - Version payante complète open source 
 Framework complet orienté JEE
-
 Granite Data Services
     - Avantages de la solution 
         - Payload très compact (marshalling JMF ou AMF) 
@@ -77,7 +71,6 @@ Granite Data Services
         - Stack technique Java importante 
         - Le paiement de la licence Granite est possible 
 Résumé
-
 Langages alternatifs
     - GroovyFX 
         - Utilisé à la place de FXML en mode compilé 
@@ -89,4 +82,3 @@ Langages alternatifs
         - FXGraph remplace FXML en mode interprété 
         - Compilation possible de FXML / FXGraph (plugin instable en alpha) 
 De nombreux choix
-

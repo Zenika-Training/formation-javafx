@@ -10,7 +10,6 @@ Composants et événements
     - Plusieurs techniques de dispatch d'événement 
         - Par dispatch local dans la Scene : « classique » 
         - Par appel d'un EventHandler personnalisé : « databinding » 
-
 Gestion événementielle
     - Les événements sont basés sur la classe Event 
         - Sous-classes plus spécifiques : MouseEvent, ScrollEvent, etc... 
@@ -23,7 +22,6 @@ Gestion événementielle
         - Phase de capture 
         - Phase de remontée (event bubbling) 
 Classes, types, et workflow
-
 Gestion événementielle
     - Sélection de la cible 
         - On détermine sur quel nœud l'interaction a eu lieu (le plus précisément et spécifiquement possible, les nœuds en avant-plan ayant la priorité). 
@@ -32,7 +30,6 @@ Gestion événementielle
         - L'EventTarget est chargé de définir par quel chemin l'événement va être diffusé. 
         - L'implémentation par défaut sur Node renvoie un chemin allant de la Stage au nœud lui-même.  
 Description des phases
-
 Gestion événementielle
     - L'événement parcours le chemin vers la Node cible (phase de capture), puis remonte vers son point d'origine (phase de remontée) 
     - En descendant, il est traité par d'éventuels Filters 
@@ -41,63 +38,49 @@ Gestion événementielle
         - Il n'ira pas plus loin dans l'arborescence 
         - Il entamera une remontée immédiatement dans le cas d'un Filter 
 Description des phases
-
 Gestion événementielle
 Workflow
-
 Gestion événementielle
 Workflow
-
 Gestion événementielle
 Workflow
-
 Gestion événementielle
 Workflow
-
 Gestion événementielle
 Workflow
-
 Gestion événementielle
 Exemple: ajout d’un listener
 Les composants possèdent des raccourcis pour définir des listeners
 Utilisation sur un node
-
 Bubbling ou Filter event?
     - Les Capture Events permettent de pouvoir stopper la propagation des événements vers les enfants 
         - Exemple : pas de support de clic sur un enfant particulier 
     - Les Capture Events étendent un comportement à l'ensemble de ses enfants 
         - Exemple : un EventFilter sur un MouseClick défini sur un GridPane, sera appelé sur chaque clic sur ce GridPane, y compris sur un de ces enfants (bouton, image...) 
 Choisir la bonne phase
-
 Bubbling ou Filter Event
     - Les Bubbling Event permettent de « remonter » des informations vers un parent après une action donnée 
     - Aucune des deux méthodes est meilleure, elles sont complémentaires! 
 Choisir la bonne phase
-
 Evénements personnalisés
     - L'enveloppe est de type SauvegarderEvent qui étend javafx.event.Event 
     - On émet l'événement depuis une méthode du composant 
 Emettre depuis un composant
-
 Evénements personnalisés
     - Ecouter un événement personnalisé depuis le parent sur l'enfant 
 Gérer l'écoute
-
 Alternative
 Définition d'un EventHandler greffable par Databinding dans le composant
 Listener avec Databinding
-
 Alternative
     - En FXML 
     - En Java 
 Listener avec Databinding depuis le parent
-
 Alternative
     - Emission de l'événement depuis le composant 
         - Le binding sur l'événement s'active alors si défini (valeur non nulle) et le listener est appelé 
         - Cette technique est utilisée dans l'implémentation de nombreux composants JavaFX 
 Listener avec Databinding
-
 Bilan
     - Deux méthodes sont possibles 
     - La méthode par databinding est la plus explicite et donc recommandée : 
@@ -106,7 +89,6 @@ Bilan
     - Le dispatch classique peut toutefois être utilisé dans certains cas 
         - Evénements locaux « internes » au composant qui ne seront pas écoutés en dehors (exemple : clic sur cellule de tableau qui ne sera pas écouté en dehors du composant tableau) 
 Les événements locaux
-
 Gestion du multitouch
     - Support natif dans JavaFX 
     - Ceux-ci sont gérés de manière similaire aux interactions "classiques" : 
@@ -117,7 +99,6 @@ Gestion du multitouch
         - ZoomEvent : "pincer pour zoomer" 
         - SwipeEvent : faire glisser un doigt, axe horizontal ou vertical 
 Pour plate-formes tactiles
-
 Gestion du multitouch
     - TouchEvent est bas-niveau 
         - Donne le détail des points de contact avec l'écran tactile 
@@ -127,13 +108,11 @@ Gestion du multitouch
         - Il existe une hierarchie sur les types d'événements
         GestureEvent.ANY > RotateEvent.ANY > RotateEvent.ROTATE_STARTED, RotateEvent.ROTATE, RotateEvent.ROTATE_FINISHED 
 TouchEvent et GestureEvent
-
 Gestion du multitouch
     - Les interactions de type zoom, défilement sont aisées 
         - Support vectoriel natif de JavaFX sur tous les éléments Node 
         - Gestion des événements aisée 
 Exemple
-
 Gestion du multitouch
     - Les interactions tactiles peuvent donner lieu à des événements non tactiles 
         - Exemple : drag + scroll, clic + touch, etc... 
@@ -142,19 +121,16 @@ Gestion du multitouch
     - Attention donc à ne pas enregistrer des listeners en double! 
         - Exemple : listener faisant défiler la page enregistré sur le scroll et le drag = 2x plus de mouvement que prévu 
 Notes particulières
-
 Bus d’événement
     - Parfois des événements peuvent intéresser plusieurs composants, à priori deux méthodes sont possibles suivant l'emplacement du composant 
         - Utiliser des événements locaux pour « remonter » au composant parent souhaité 
         - Utiliser des méthodes publiques sur les composants enfants pour « descendre » jusqu'au composant souhaité 
 Un design pattern utile
-
 Loi de Demeter
     - La loi d'encapsulation (Demeter) sur les composants nous incite à ne pas descendre / remonter dans la hiérarchie de composants à plus de un niveau pour ajouter un listener propre 
         - Chaque composant du parcourt devrait donc posséder un handler / méthode publique pour router l'action au bon composant 
         - Comment rendre le développement plus rapide ? 
 Principe d'encapsulation
-
 Bus d’événement
     - La hiérarchie des composants peut être : 
         - Complexe (beaucoup d'embranchements) 
@@ -164,13 +140,11 @@ Bus d’événement
         - Il devient donc possible d'écouter un événement « global » sans être attaché à l'arbre des composants 
         - Fonctionnement de type publish / subscribe 
 Pourquoi?
-
 Bus d’événement
 Le composant B veut s'abonner à un événement du composant F
 Les composants B, D et F veulent être notifiés d'une déconnexion réseau
 Les composants C et E veulent être notifiés d'une fermeture d'une popup modale
 Cas d’utilisation
-
 Bus d’événement
     - Plusieurs frameworks proposent des bus d'événements 
         - Spring Events 
@@ -181,4 +155,3 @@ Bus d’événement
         - Un bus d'événement peut s'exécuter dans l'Application Thread de JavaFX ou dans un autre géré manuellement 
         - Son utilisation peut être fortement couplée à un framework donné 
 Implémentations
-

@@ -7,33 +7,28 @@ SceneBuilder et ScenicView
     - ScenicView est un outil externe (fxexperience.com) 
         - Inspection d'une application JavaFX en live 
         - Modifications de propriétés en live 
-
 Le composant WebView
     - Utilisation de FireBug intégrable dans JavaFX 
     - Injection via le WebEngine 
 Debug HTML5 dans JavaFX
-
 Les IDE disponibles
 Forces (interne) : basé sur Eclipse, gratuit et open source, adoption très large, support de JavaFX efficace, support de FXGraph
 Opportunités (externe) : développement de plugins, support de nombreuses technologies et langages, intégration définitive du plugin dans Eclipse
 Faiblesses (interne) : performances, plugins de qualités inégales, intégration Maven et WTP instables, nécessite souvent l'ajout de plugins
 Menaces (externe) : support communautaire pas toujours adapté aux entreprises, performances pouvant se dégrader, instabilité dans certaines versions
 E(fx)CLIPSE
-
 Les IDE disponibles
 Forces (interne) : Performances, robustesse, intégration Maven, support JavaFX efficace, haut niveau de personnalisation
 Opportunités (externe) : Support de nombreuses technologies et langages, support de Java 8 et lambdas, inspections de code très étendues
 Faiblesses (interne) : Payant (500$ pour une licence professionnelle), moins répandu en entreprise qu'Eclipse à ce jour
 Menaces (externe) : Evolution du support JavaFX dépendant du succès de la technologie
 Intellij
-
 Les IDE disponibles
 Forces (interne) : Supporté par Oracle (solution officielle), intégration de JavaFX bien documentée
 Opportunités (externe) : Support de JavaFX assuré par Oracle dans les prochaines versions
 Faiblesses (interne) : Adoption marginale, intégration à des technologies non Oracle limitée, écosystème peu étendu
 Menaces (externe) : Adoption de NetBeans demeurant marginale
 NetBeans
-
 Tests et IHM
     - Plusieurs solutions existent 
         - Configuration manuelle de tests spécifique pour JavaFX 
@@ -48,7 +43,6 @@ Tests et IHM
         - Plus fiables que des tests manuels car automatiques 
         - A terme moins coûteux et couvrant un plus grand scope que des tests manuels 
 Plusieurs options
-
 JemmyFX
     - Disponible sur le repository de JavaFX (mercurial) 
         - Build manuel du projet 
@@ -61,10 +55,8 @@ JemmyFX
         - Il faut étendre une classe de test JemmyFX 
         - Utilise par défaut un mode d'émulation par événement JavaFX mais peut utiliser un mode par robot (événement de type système) 
 L'outil officiel
-
 JemmyFX
 Exemple
-
 TestFX
     - Originellement intégré dans LoadUI (produit payant) 
         - Intégré dans la solution payante TestComplete 
@@ -72,7 +64,6 @@ TestFX
         - https://github.com/SmartBear/TestFX 
     - SmartBear est un éditeur connu surtout pour son produit SoapUI 
 La solution de SmartBear
-
 TestFX
 @Category( TestFX.class )
 public class LabelForTest extends GuiTest {
@@ -97,7 +88,6 @@ public class LabelForTest extends GuiTest {
         }
 }
 Exemple
-
 MarvinFX
     - Solution open source de test pour JavaFX 
         - https://github.com/guigarage/MarvinFX 
@@ -106,7 +96,6 @@ MarvinFX
     - Peu de features 
     - Efficace 
 Alternative open source
-
 MarvinFX
 public class UnitTests {
         @Test
@@ -133,12 +122,10 @@ public class UnitTests {
         }
 }
 Exemple
-
 Testabilité d'une IHM
     - Contexte applicatif 
     - Contexte de test 
 Comment faire?
-
 Composants testables
     - Respect du principe d'encapsulation (loi de Déméter) 
         - Un composant ne peut modifier que ses enfants directs 
@@ -149,7 +136,6 @@ Composants testables
         - Utilisation d'un bus d'événement en cas de hierarchie complexe de  composants / ou d'événement à écouteurs multiples 
     - Un composant gère la navigation par actions sur ses enfants directs,  qui répercutent cette navigation sur les leurs, etc 
 Bonnes pratiques
-
 Usine logicielle
     - JavaFX dispose d'un plugin Maven 
     - Principe de l'intégration continue 
@@ -157,7 +143,6 @@ Usine logicielle
         - Déploiement automatique possible sur un serveur d'intégration des  versions 
         - Signalement automatique des erreurs de builds 
 Une intégration souple
-
 Maven et JavaFX
     - Support des différents types de déploiement JavaFX 
         - Avec ou sans JVM 
@@ -169,4 +154,3 @@ mvn archetype:generate -DarchetypeGroupId=com.zenjava
     - Possibilité de signer les livrables 
     - http://zenjava.com/javafx/maven/ 
 Description du plugin
-

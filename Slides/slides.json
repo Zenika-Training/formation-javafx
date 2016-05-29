@@ -7,8 +7,8 @@
   "05_architecture_client.md",
   "06_enrichir_vos_interfaces.md",
   "07_animation.md",
-  "08_concurrence.md",
-  "09_evenements.md",
+  "08_evenements.md",
+  "09_concurrence.md",
   "10_integration_swing.md",
   "11_test_et_outils.md",
   "12_autour_de_javafx.md"
