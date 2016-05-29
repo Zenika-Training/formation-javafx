@@ -170,17 +170,20 @@ style...) car Swing reste assez « bas niveau »**
 Le moteur de rendu est sélectionné par rapport à la plate-forme (DirectX, OpenGL, Software rendering au pire)
 
 <figure>
-    <img src="ressources/01_jfxar_dt_001_arch-diag.png" alt="JavaFX Architecture Diagram" width="60%"/>
+    <img src="ressources/01/architecture.png" alt="JavaFX Architecture Diagram" width="60%"/>
 </figure>
 
 - API riche et de type « haut niveau »
 - Nombreux composants disponibles
 - Bibliothèque d'animations et effets
 
+<br>
+
+Cf. [Site Oracle](http://docs.oracle.com/javase/8/javafx/get-started-tutorial/jfx-architecture.htm#JFXST788)
+
 
 
 ## FXLM + CSS + Java : un combo intéressant
-
 
 - **FXML : XML descripteur de l'IHM et de sa mise en page (layout)**
   - Semblable à XAML, XUL, MXML, XHTML...
@@ -226,12 +229,12 @@ Le moteur de rendu est sélectionné par rapport à la plate-forme (DirectX, Ope
 * Portages disponibles sur iOS et Android
 
 <figure style="position: absolute; bottom: 60px; right: 30px; width: 17%">
-    <img src="ressources/01_pad.png" alt="DukePad" />
+    <img src="ressources/01/pad.png" alt="DukePad" />
 </figure>
 
 
 <figure style="position: absolute; bottom: 60px; right: 300px; width: 20%">
-    <img src="ressources/01_raspi.png" alt="Raspberry Pi" />
+    <img src="ressources/01/raspi.png" alt="Raspberry Pi" />
 </figure>
 
 

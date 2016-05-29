@@ -35,7 +35,7 @@
   - JVM 7 (ou supérieure) 
 
 <figure style="position: absolute; bottom: 30px; right:30px; width: 65%;">
-    <img src="ressources/02_javafx_melimelo.png" alt="JavaFX elements" />
+    <img src="ressources/02/javafx_melimelo.png" alt="JavaFX elements" />
 </figure>
 
 
@@ -91,7 +91,7 @@ public class FirstScreen extends Application {
 ```
 
 <figure style="position: absolute; top:20%; right:5%; width: 25%;">
-    <img src="ressources/02_scene.png" alt="Premiere scène" />
+    <img src="ressources/02/scene.png" alt="Premiere scène" />
 </figure>
 
 
@@ -106,11 +106,11 @@ public class FirstScreen extends Application {
 - Chaque Node peut avoir des enfants (pattern composite) 
 
 <figure style="position: absolute; bottom:15%; left:10%;">
-    <img src="ressources/02_scenegraph_abstract.png" alt="Vision abtraite du Scene Graph" />
+    <img src="ressources/02/scenegraph_abstract.png" alt="Vision abtraite du Scene Graph" />
 </figure>
 
 <figure style="position: absolute; bottom:15%; right:10%;">
-    <img src="ressources/02_scenegraph_example.png" alt="Exemple de Scene Graph" />
+    <img src="ressources/02/scenegraph_example.png" alt="Exemple de Scene Graph" />
 </figure>
 
 
@@ -162,7 +162,7 @@ GridPane avec layouts en rows / columns
 ```
 
 <figure style="position: absolute; top:50%; right:5%; width: 25%;">
-    <img src="ressources/02_login.png" alt="Login" />
+    <img src="ressources/02/login.png" alt="Login" />
 </figure>
 
 
@@ -170,7 +170,7 @@ GridPane avec layouts en rows / columns
 ## L'outil SceneBuilder : What You See Is What You Get (WYSIWYG)
 
 <figure>
-    <img src="ressources/02_scenebuilder.png" alt="Scene Builder 8.2"/>
+    <img src="ressources/02/scenebuilder.png" alt="Scene Builder 8.2"/>
 </figure>
 
 
@@ -381,7 +381,7 @@ Des éléments et contrôles complexes pourront être ajoutés en JAVA au besoin
   - Java *Web Start*
 
 <figure style="position: absolute; bottom: 2%; right:0%; width: 48%;">
-    <img src="ressources/02_deploy_type_properties.png" alt="Types de déploiement"/>
+    <img src="ressources/02/deploy_type_properties.png" alt="Types de déploiement"/>
 </figure>
 
 
@@ -412,7 +412,7 @@ Des éléments et contrôles complexes pourront être ajoutés en JAVA au besoin
       - Package des classes applicatives dans un seul JAR + livraison des dépendances JAR externes 
 
 <figure>
-    <img src="ressources/02_standalone.png" alt="Types de déploiement" width="60%"/>
+    <img src="ressources/02/standalone.png" alt="Types de déploiement" width="60%"/>
 </figure>
 
 - *Le mode WebStart*
