@@ -131,7 +131,7 @@ setOnMouseClicked(EventHandler<MouseEvent> handler)
   - Les Capture Events permettent de pouvoir stopper la propagation des événements vers les enfants 
     - Exemple : pas de support de clic sur un enfant particulier 
   - Les Capture Events étendent un comportement à l'ensemble de ses enfants 
-    - Exemple : un EventFilter sur un MouseClick défini sur un GridPane, sera appelé sur chaque clic sur ce GridPane, y compris sur un de ces enfants (bouton, image...) 
+    - Exemple : un EventFilter sur un MouseClick défini sur un GridPane, sera appelé sur chaque clic sur ce GridPane, y compris sur un de ses enfants (bouton, image...) 
 
 - *Bubbling events* (Handlers)
   - Les Bubbling Event permettent de « remonter » des informations vers un parent après une action donnée 
@@ -329,8 +329,8 @@ someComponent.setOnZoom(new EventHandler<ZoomEvent>() {
   - Utiliser des méthodes publiques sur les composants enfants pour « descendre » jusqu'au composant souhaité 
 
 - *Principe d'encapsulation : Loi de Demeter*
-    - La loi d'encapsulation (Demeter) sur les composants nous incite à ne pas descendre / remonter dans la hiérarchie de composants à plus de un niveau pour ajouter un listener propre 
-    - Chaque composant du parcourt devrait donc posséder un handler / méthode publique pour router l'action au bon composant 
+    - La loi d'encapsulation (Demeter) sur les composants nous incite à ne pas descendre / remonter dans la hiérarchie de composants à plus d'un niveau pour ajouter un listener propre 
+    - Chaque composant du parcours devrait donc posséder un handler / une méthode publique pour router l'action au bon composant 
     - Comment rendre le développement plus rapide ?
 
 

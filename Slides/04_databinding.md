@@ -15,12 +15,12 @@
 *Comment suivre le mieux possible l'état interne d'un objet?*
 
 - *Stratégie active*: scrutation périodique (polling)
-  - lecture régulière des information qui nous intéressent
-  - Nombreux inconvénient:
+  - Lecture régulière des information qui nous intéressent
+  - Nombreux inconvénients:
     - Efforts inutiles
     - Problématique de fréquences d'échantillonnage
    
-- *Stratégie passive*: recevoir des notifications.
+- *Stratégie passive*: recevoir des notifications
   1. On signale son intérêt pour une donnée particulière
   2. On est notifié lorsque la donnée est modifiée
   3. On se désinscrit lorsque l'information ne nous intéresse plus.
@@ -31,7 +31,7 @@
 
 - *Problématique récurrente* <br>
   Patron de conception "observateur", publish-subscribe, ...<br>
-  En java "classique":
+  En Java "classique" :
   - *PropertyChangeListener* / *PropertyChangeEvent* / *PropertyChangeSupport*
   - *Observer* / *Observable*
 
@@ -64,8 +64,8 @@
 - Supportée par l'ensemble des composants JavaFX
    
 - *L'objet Property peut décrire:*
-  - Un état graphique (taille du composant, style css appliqué, …) 
-  - Un état du modèle (texte d'un champs de saisie, position sélectionnée sur un slider, …) 
+  - Un état graphique (taille du composant, style CSS appliqué, …) 
+  - Un état du modèle (texte d'un champ de saisie, position sélectionnée sur un slider, …) 
 
 - *Pour utiliser un objet Property il faut définir:* 
   - Des getters et setters 

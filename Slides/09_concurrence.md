@@ -52,7 +52,7 @@
   - Appels HTTP ou autres types de requêtes sur le réseau 
   - Accès filesystem (ouverture de fichiers) 
   - Accès base de données distante ou locale 
-  - Longue computation (décryptage, compression de données volumineuses...) 
+  - Longue computation (déchiffrement, compression de données volumineuses...) 
 
 
 

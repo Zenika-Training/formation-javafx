@@ -88,7 +88,7 @@
 
 - De la même façon, attention au choix du thread 
   - EDT Swing ou AT JavaFX suivant les composants 
-  - **setContent()** de SwingNode peut être invoqué de l'EDT comme de l'AT est représente une exception 
+  - **setContent()** de SwingNode peut être invoqué de l'EDT comme de l'AT et représente une exception 
 
 
 
@@ -124,7 +124,7 @@
 ## JavaFX + Swing : Les inconvénients
 
 - *La bonne gestion des threads est ardue et verbeuse* 
-  - L'EDT et l'AT en Java FX 8 (livré avec Java SE 8) on été fusionnés pour plus de facilité, mais c'est une *feature expérimentale*
+  - L'EDT et l'AT en Java FX 8 (livré avec Java SE 8) ont été fusionnés pour plus de facilité, mais c'est une *feature expérimentale*
   - Activable via une propriée de la JVM:
   
 > java -Djavafx.embed.singleThread=true
