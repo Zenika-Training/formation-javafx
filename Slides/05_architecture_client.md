@@ -39,7 +39,7 @@
 
 ## MVP vs MVC : Les différences principales
 
-- *MVC : L'utilisateur intéragit avec le contrôleur*
+- *MVC : L'utilisateur interagit avec le contrôleur*
   - Le contrôleur décrit un comportement, peut être partagé par plusieurs vues 
   - Le contrôleur choisit la vue à afficher 
   - Le modèle utilisé peut être fortement couplé à la vue, notamment par databinding 
@@ -98,8 +98,8 @@
 
 ## Le design pattern MVVM : Spécificités
 
-- Dans les exemples précédents, on travaillait "de l'extérieur":
-  - FXMLLoader instanciait une élément nouveau
+- Dans les exemples précédents, on travaillait "de l'extérieur" :
+  - FXMLLoader instanciait un élément nouveau
   - L'instanciation du contrôleur créait un objet séparé.
   
 - *Ce mode doit être adapté pour MVVM*:
@@ -340,7 +340,7 @@ loader.setBuilderFactory(springBuilderFactory);
   - Utilisation d'un Glass Pane et d'un Splash Screen 
   - Indiquer dans les champs de saisie un texte spécifique 
   
-- Si un écran est entièrement bindé à des objets Property, alors le null object pattern peut servir 
+- Si un écran est entièrement bindé à des objets Property, alors le null object pattern peut servir à :
   - Etendre la classe métier bindable 
   - Définir dans cette classe les champs à afficher correspondants à la valeur nulle 
   - Initialiser la vue avec un objet de type Null Object 

@@ -355,7 +355,7 @@ rootNode.getChildren().add(new Label("Hello World !"));
 - *Le FXML permet de mieux organiser le code*
     - XML pour la vue statique 
     - Controller Java pour les interactions et la dynamique 
-    - possibilité de séparer les rôles (UI vs code)
+    - Possibilité de séparer les rôles (UI vs code)
     
     
 - *Le FXML a quelques défauts*

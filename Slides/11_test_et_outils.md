@@ -26,7 +26,7 @@
 
 ## Le composant WebView : Débogage HTML5/Javascript
 
-- l'utilisation de *FireBug* intégrable dans JavaFX 
+- L'utilisation de *FireBug* intégrable dans JavaFX 
 - Injection via le WebEngine
 ```java
 engine.executeScript("code standard d'injection FireBug Lite"); 

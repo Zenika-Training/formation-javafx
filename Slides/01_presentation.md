@@ -183,7 +183,7 @@ Cf. [Site Oracle](http://docs.oracle.com/javase/8/javafx/get-started-tutorial/jf
 
 
 
-## FXLM + CSS + Java : un combo intéressant
+## FXML + CSS + Java : un combo intéressant
 
 - **FXML : XML descripteur de l'IHM et de sa mise en page (layout)**
   - Semblable à XAML, XUL, MXML, XHTML...

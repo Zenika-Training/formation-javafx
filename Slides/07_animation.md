@@ -45,7 +45,7 @@ PRISM est en charge du travail de rendu et de rastérisation des scenes JavaFX.
 
 
 ## Quantum Toolkit
-*Quantum Toolki* : la façade utilisée par JavaFX
+*Quantum Toolkit* : la façade utilisée par JavaFX
 
 <figure>
     <img src="ressources/07/architecture.png" alt="Architecture" />
@@ -221,7 +221,7 @@ KeyFrame frame = new KeyFrame(Duration.seconds(2.5d), op, ro);
     node.setDepthTest(DepthTest.DISABLE); // ou ENABLE, ou INHERIT (défaut)
     ```
     - Activation / désactivation / hérité du parent
-  - Les test est activé par défaut sur le nœud racine
+  - Le test est activé par défaut sur le nœud racine
 
 
 

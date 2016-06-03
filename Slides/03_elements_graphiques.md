@@ -179,7 +179,7 @@ L'architecture choisie par JavaFX
   - Ressource chargée dans un *Media* 
   - Contrôle de la lecture via *MediaPlayer* 
   - Affichage dans l'IHM via *MediaView*  
-    - la barre de contrôle n'est pas incluse 
+    - La barre de contrôle n'est pas incluse 
 
 <br>
 
