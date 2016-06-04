@@ -5,6 +5,8 @@
 Installateurs de JDK 8 (32 ou 64 bits suivant parc machines) pour Windows sur le site d'Oracle
   - http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
+Facultatif: Installation des exemples et démos Java
+
 ## Installation de l'IDE (Eclipse)
 
 Installateurs de e(fx)clipse 32 et 64 bits pour Windows: 
@@ -27,8 +29,4 @@ Facultatif: récupération de ScenicView
 
 Checkout complet de ce github repository
   - https://github.com/Zenika/formation-javafx
-
-Facultatif: Installation des exemples et démos Java:
-  - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-
 
