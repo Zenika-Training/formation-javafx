@@ -6,21 +6,55 @@
 
 ## Sommaire
 
-@@@ TODO
+<!-- .slide: class="toc" -->
+
+- [Présentation de JavaFX 8](#/1)
+- [Première application](#/2)
+- [Éléments graphiques](#/3)
+- [Databinding](#/4)
+- [Architecture](#/5)
+- [Enrichir vos interfaces](#/6)
+- [Animation](#/7)
+- [Événements](#/8)
+- [Concurrence](#/9)
+- [Intégration avec Swing](#/10)
+- **[Tests et outils]**
 
 
 
-##Les outils de base : SceneBuilder et ScenicView
+## Les outils de base : SceneBuilder et ScenicView
 
 - *SceneBuilder* est l'outil officiel pour la construction de FXML de manière visuelle
+  - http://gluonhq.com/open-source/scene-builder/
  
-- *ScenicView* est un outil externe (fxexperience.com) 
+- *ScenicView* est un outil externe
+  - http://fxexperience.com/scenic-view/ 
   - Inspection d'une application JavaFX en live 
   - Modifications de propriétés en live
 
-<figure style="position: absolute; bottom: 5%; right: 5%;">
+<figure style="position: absolute; bottom: 10%; right: 1%;">
     <img src="ressources/11/scenicview.png" alt="Scenic View" />
 </figure>
+
+
+
+## Ressources et liens utiles
+
+- La documentation officielle d'*Oracle*
+  - http://docs.oracle.com/javase/8/javase-clienttechnologies.htm
+
+- *Gluon*, a repris les ports JavaFX vers Android ou iOs, et proposent de nombreux projets JavaFX
+  - http://gluonhq.com/open-source/
+
+- *FX experience* : propose des ressources intéressantes (notamment ScenicView et ControlsFX) ainsi que des 
+   publications régulières autour de JavaFX 
+  - http://fxexperience.com/
+
+- *JFXtras* regroupe de nombreux contrôles et outils utiles au quotidien
+  - http://jfxtras.org/
+
+- *JFoenix* : JavaFX "material design"
+  - http://jfoenix.com/
 
 
 

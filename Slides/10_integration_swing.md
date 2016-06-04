@@ -6,11 +6,23 @@
 
 ## Sommaire
 
-@@@ TODO
+<!-- .slide: class="toc" -->
+
+- [Présentation de JavaFX 8](#/1)
+- [Première application](#/2)
+- [Éléments graphiques](#/3)
+- [Databinding](#/4)
+- [Architecture](#/5)
+- [Enrichir vos interfaces](#/6)
+- [Animation](#/7)
+- [Événements](#/8)
+- [Concurrence](#/9)
+- **[Intégration avec Swing]**
+- [Tests et outils](#/11)
 
 
 
-##Intégrer JavaFX dans une application Swing
+## Intégrer JavaFX dans une application Swing
 
 - Possible via le composant Swing *JFXPanel*
  

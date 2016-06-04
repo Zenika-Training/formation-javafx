@@ -1,4 +1,4 @@
-# DataBinding 
+# Databinding 
 
 <!-- .slide: class="page-title" -->
 
@@ -6,13 +6,25 @@
 
 ## Sommaire
 
-@@@ TODO
+<!-- .slide: class="toc" -->
+
+- [Présentation de JavaFX 8](#/1)
+- [Première application](#/2)
+- [Éléments graphiques](#/3)
+- **[Databinding]**
+- [Architecture](#/5)
+- [Enrichir vos interfaces](#/6)
+- [Animation](#/7)
+- [Événements](#/8)
+- [Concurrence](#/9)
+- [Intégration avec Swing](#/10)
+- [Tests et outils](#/11)
 
 
 
 ## La notion de databinding?
 
-*Comment suivre le mieux possible l'état interne d'un objet?*
+*Comment suivre au mieux l'état interne d'un objet?*
 
 - *Stratégie active*: scrutation périodique (polling)
   - Lecture régulière des information qui nous intéressent
