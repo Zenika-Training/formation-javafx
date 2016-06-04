@@ -4,9 +4,75 @@
 
 
 
-## De la bonne utilisation des lambdas
+## Lambdas, call-backs : une évolution importante
 
-@@@ TODO
+Exemple de contrôleur trivial, façon Java6 (classe anonyme)
+
+```java
+public class Controller implements Initializable {
+    @FXML
+    private Button button;
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                // exemple d'action
+                System.out.println("C'est OK!");
+            }
+        });
+    }
+}
+
+```
+
+- Quelques inconvénients:
+  - Très verbeux
+  - Des actions enchaînées rendent le code atroce ("Callback Hell")
+
+
+
+## Lambdas, call-backs : Java8
+
+*Java8 : utilisation des lambdas*
+  ```java
+  button.setOnAction(e -> {
+    // exemple d'action
+    System.out.println("C'est OK!");
+  });
+  ```
+  - Code plus dense
+  - Paramètres difficiles à comprendre (qu'est-ce que 'e' ?)<br>
+    - *Les paramètres reprennent le nom de leur type (**actionEvent** plutôt que **e**)*
+  - Code difficile à lire (code appelant et callback mélangés)
+    - *Une lambda doit rester courte : pas plus de 2 ou 3 lignes* 
+  - Callback Hell
+    - *Ne jamais imbriquer des lambdas.*
+
+
+
+
+## Lambdas, call-backs : Java8
+
+*Java8 : utilisation des références de fonction*
+  ```java
+     public void initialize(URL location, ResourceBundle resources) {
+       button.setOnAction(this::buttonClicked);
+     }
+
+     private void buttonClicked(ActionEvent actionEvent) {
+       // exemple d'action
+       System.out.println("C'est OK!");
+     }  
+  ```
+
+  - Code dense
+  - Facile à lire, facile à débugger
+  - *Important: donner un nom explicite aux fonctions* 
+
+
+
+## Notes
 
 
 

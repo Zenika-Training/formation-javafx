@@ -6,7 +6,19 @@
 
 ## Sommaire
 
-@@@ TODO
+<!-- .slide: class="toc" -->
+
+- [Présentation de JavaFX 8](#/1)
+- [Première application](#/2)
+- [Éléments graphiques](#/3)
+- [Databinding](#/4)
+- [Architecture](#/5)
+- **[Enrichir vos interfaces]**
+- [Animation](#/7)
+- [Événements](#/8)
+- [Concurrence](#/9)
+- [Intégration avec Swing](#/10)
+- [Tests et outils](#/11)
 
 
 
@@ -88,7 +100,7 @@ b1.setStyle(css1);
   - Utilisation de StyleableObjectProperty et de CssMetadata 
 
 - *Une bibliothèque est disponible pour faciliter l’implémentation « CSSHelper »*<br>
-  N'est plus maintenue de faćon active.
+  N'est plus maintenue de façon active.
   - http://www.guigarage.com/2014/03/javafx-css-utilities/
 
     ```xml
@@ -479,9 +491,8 @@ Puis *l'intégrer par binding dans FXML*
   - Se repose sur l'utilisation de classes CSS spécifiques pour chaque support 
   - Le toolkit reconnaît le matériel et applique le style CSS adéquat 
 - Les dispositifs sont reconnus comme dans [Twitter Bootstrap](http://getbootstrap.com/)
-
 <figure>
-    <img src="ressources/06/responsivefx.png" alt="Responsive FX" width="65%"/>
+    <img src="ressources/06/responsivefx.png" alt="Responsive FX" width="60%"/>
 </figure>
 
 
@@ -571,9 +582,43 @@ pane.getChildren().add(extraSmallToolbar, smallToolbar, mediumToolbar, largeTool
 
 
 
-## Impression
+## Impression directe
 
-@@@ TODO
+- *L'impression sous JavaFX est simple à mettre en oeuvre : notion de job d'impression (PrinterJob)*
+  - Imprime une arborescence de noeuds (passage en paramètre du *Node* à imprimer)
+  - Le SceneGraph à imprimer peut être visible ou non
+  - La classe *Printer* permet de représenter les imprimantes disponibles
+  - La classe *PrintJob* permet d'ouvrir les dialogues d'impression standard (**showPrintDialog()**, **showPageSetupDialog**)
+  ```java
+  PrinterJob job = PrinterJob.createPrinterJob();
+  if (job != null && job.showPrintDialog(node.getScene().getWindow())) {
+      boolean success = job.printPage(node);
+      if (success) {
+          job.endJob();
+      }
+  }
+  ```
+
+
+
+## Impression d'un snapshot
+
+  L'impression peut être lancée de n'importe quel Thread (pas uniquement l'AT JavaFX). Mais:
+
+  <!-- .element class="alert alert-danger"-->
+  Attention à ne pas imprimer un SceneGraph en cours de modification!
+  
+  Le rendu de l'impression serait alors... imprévisible.
+  
+
+- *Possibilité d'utiliser la notion de 'snapshot' sur tous les Pane*
+  ```java
+  WritableImage snapshot = new WritableImage(
+      (int) pane.getPrefWidth(), (int) pane.getPrefHeight());
+  pane.snapshot(null, writableImage);
+  
+  ```
+
 
 
 <!-- .slide: class="page-questions" -->

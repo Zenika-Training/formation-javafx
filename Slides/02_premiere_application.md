@@ -10,17 +10,15 @@
 
 - [Présentation de JavaFX 8](#/1)
 - **[Première application]**
-- [Composants et layouts](#/3)
-- [Données et architecture](#/4)
-
-- [Enrichir vos interfaces](#/5)
-- [Animation](#/6)
-- [Concurrence](#/7)
-
-- [Les événements](#/8)
-- [Intégration avec Swing](#/9)
-- [Tests et outils](#/10)
-- [Pour aller plus loin](#/11)
+- [Éléments graphiques](#/3)
+- [Databinding](#/4)
+- [Architecture](#/5)
+- [Enrichir vos interfaces](#/6)
+- [Animation](#/7)
+- [Événements](#/8)
+- [Concurrence](#/9)
+- [Intégration avec Swing](#/10)
+- [Tests et outils](#/11)
 
 
 

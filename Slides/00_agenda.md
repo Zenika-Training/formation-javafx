@@ -4,23 +4,35 @@
 
 
 
-## Sommaire - Jour 1
+## Sommaire
 
 <!-- .slide: id="master-toc" class="toc" -->
 
-- [Présentation de JavaFX 8](#/1)
-- [Première application](#/2)
-- [Composants et layouts](#/3)
-- [Données et architecture](#/4)
+- *Jour 1*
+  - [Présentation de JavaFX 8](#/1)
+  - [Première application](#/2)
+  - [Éléments graphiques](#/3)
+  - [Databinding](#/4)
 
-- [Enrichir vos interfaces](#/5)
-- [Animation](#/6)
-- [Concurrence](#/7)
+- *Jour 2*
+  - [Architecture](#/5)
+  - [Enrichir vos interfaces](#/6)
+  - [Animation](#/7)
+  - [Événements](#/8)
 
-- [Les événements](#/8)
-- [Intégration avec Swing](#/9)
-- [Tests et outils](#/10)
-- [Pour aller plus loin](#/11)
+
+
+
+## Sommaire
+
+<!-- .slide: id="master-toc" class="toc" -->
+
+- *Jour 3*
+  - [Concurrence](#/9)
+  - [Intégration avec Swing](#/10)
+  - [Tests et outils](#/11)
+  - [Annexes](#/12)
+
 
 
 
