@@ -321,7 +321,7 @@ someComponent.setOnZoom(new EventHandler<ZoomEvent>() {
 
 
 
-## Gestion du multitouch : Notes particulières
+## Gestion du multitouch : A noter
 
 - *Les interactions tactiles peuvent donner lieu à des événements non tactiles* 
   - Exemple : drag + scroll, clic + touch, etc... 

@@ -59,7 +59,7 @@
 - *MVP : L'utilisateur intéragit avec la vue*
   - Souvent une Présentation par Vue (des vues complexes peuvent avoir plusieurs Présentations), une implémentation classique en « Presentation Model » impose 1 View = 1 Presenter 
   - Le Presenter se charge du binding au modèle, la Vue en est plus fortement découplée (elle n'a pas de connaissance du modèle) 
-  - Le Presenter est fortement couplé à l'interface de la Vue : plus facilement testable 
+  - Le Presenter est couplé uniquement à l'interface de la Vue : plus facilement testable 
 
 
 
@@ -342,7 +342,7 @@ loader.setBuilderFactory(springBuilderFactory);
 
 <br>
 
-*Ce pattern a eu son heure de gloire mais tend aujourd'hui à être remplacé par **Optional&lt;...&gt;**, proposé par Java8*
+*Ce pattern tend aujourd'hui à être remplacé par **Optional&lt;...&gt;**, proposé par Java8*
 
 
 
