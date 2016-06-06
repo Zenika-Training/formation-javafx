@@ -6,7 +6,7 @@
 
 ## Lambdas, call-backs : une évolution importante
 
-Exemple de contrôleur trivial, façon Java6 (classe anonyme)
+Exemple simple, façon Java6 (classe anonyme)
 
 ```java
 public class Controller implements Initializable {

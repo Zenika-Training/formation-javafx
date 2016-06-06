@@ -189,7 +189,7 @@ L'architecture choisie par JavaFX
   - *Audio* avec lecture MP3 
   - *Vidéo* (FLV, Mpeg-4 avec H.264) 
   - Ressource chargée dans un *Media* 
-  - Contrôle de la lecture via *MediaPlayer* 
+  - Contrôle de la lecture: *MediaPlayer* 
   - Affichage dans l'IHM via *MediaView*  
     - La barre de contrôle n'est pas incluse 
 
@@ -302,13 +302,13 @@ Ce layout est simple mais assez limité
   - *Top*, prend toute la largeur en haut 
   - *Bottom*, prend toute la largeur en bas 
   - *Center*, zone centrale 
-  - *Left*, même hauteur que center, à gauche 
-  - *Right*, même hauteur que center, à droite 
+  - *Left*, gauche, même niveau que center 
+  - *Right*, droite, même niveau que center 
 - Chaque composant est affecté à une région 
   - Chaque composant est redimensionné pour occuper la région au maximum 
   - Le BorderPane essaye d'honorer les tailles définies (minimum, préférée, maximum) de ses composants. 
 
-<figure style="position: absolute; bottom: 40%; right: 2%; width:40%;">
+<figure style="position: absolute; top: 19%; right: 2%; width:40%;">
     <img src="ressources/03/borderpane.png" alt="Border Pane" />
 </figure>
 

@@ -359,7 +359,7 @@ stage.show();
   - Mettre à l'échelle le rendu graphique pour une autre résolution 
   - Comme tout élément est vectorisé en JavaFX, ce principe est facile à mettre en place 
   - Les widgets et textes sont redimensionnés 
-  - Possibilité de garder le ratio originel, ou remplir par des "bandes noires". 
+  - Possibilité de garder le ratio originel et ajouter des "bandes noires". 
 
 - *Le rendu est passable si:* 
   - Le ratio est à peu près le même 
@@ -418,7 +418,7 @@ public static void scaleToScreen(Window w) {
 
 ## Responsive UI : La question des textes
 
-- *Une mise à l'échelle (ratio / résolution) n'est pas suffisante dans certains cas* 
+- *La mise à l'échelle (ratio / résolution) ne suffit pas toujours* 
   - Suivant les DPI, certains textes deviennent illisibles car trop petits! 
 <figure>
     <img src="ressources/06/css_units.png" alt="Unités de mesure en CSS" />

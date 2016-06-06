@@ -43,7 +43,7 @@
 - La documentation officielle d'*Oracle*
   - http://docs.oracle.com/javase/8/javase-clienttechnologies.htm
 
-- *Gluon*, a repris les ports JavaFX vers Android ou iOs, et proposent de nombreux projets JavaFX
+- *Gluon*, a repris les ports JavaFX vers Android ou iOs, les binaires ARM, et proposent de nombreux projets JavaFX
   - http://gluonhq.com/open-source/
 
 - *FX experience* : propose des ressources intéressantes (notamment ScenicView et ControlsFX) ainsi que des 
@@ -141,7 +141,7 @@ engine.executeScript("code standard d'injection FireBug Lite");
 
 Originellement d'Oracle et transféré à OpenJFX en 2012
 
-- *Disponible uniquement sous forme de sources* (repository mercurial de JavaFX) 
+- *Disponible uniquement sous forme de sources* (dépôt hg de OpenJFX) 
   - Build manuel du projet 
   - Déploiement de l'artifact manuel dans Maven 
   - L'intégration dans une usine logicielle n'est donc pas native 

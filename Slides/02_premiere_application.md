@@ -406,7 +406,7 @@ Des éléments et contrôles complexes pourront être ajoutés en JAVA au besoin
 
 - *Mode Standalone*
     - Livraison d'un JAR exécutable
-      - Package de l'ensemble des dépendances dans un seul JAR 
+      - Package de l'ensemble des dépendances dans un seul JAR, ou
       - Package des classes applicatives dans un seul JAR + livraison des dépendances JAR externes 
 
 <figure>
@@ -414,7 +414,7 @@ Des éléments et contrôles complexes pourront être ajoutés en JAVA au besoin
 </figure>
 
 - *Le mode WebStart*
-    - Déploiement sur un serveur Web pour gestion automatique des versions 
+    - Déploiement Web pour gestion automatique des versions 
     - Permet toutefois le lancement de l'application en mode déconnecté 
 
 
